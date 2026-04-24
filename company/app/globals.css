@@ -1,0 +1,35 @@
+@import "./styles/tokens.css";
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(98, 213, 255, 0.12), transparent 50%),
+    linear-gradient(160deg, #163d62 0%, #215990 100%);
+}
+
+.cta-gradient {
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(98, 213, 255, 0.1), transparent 50%),
+    linear-gradient(160deg, #163d62 0%, #215990 100%);
+}

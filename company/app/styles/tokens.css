@@ -1,0 +1,21 @@
+@layer base {
+  :root {
+    --color-primary: #163d62;
+    --color-accent: #62d5ff;
+    --color-surface: #ffffff;
+    --color-surface-subtle: #f4f7fb;
+    --color-black-text: #0f172a;
+    --color-white-text: #ffffff;
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --color-border: rgba(15, 23, 42, 0.08);
+    --color-border-light: rgba(255, 255, 255, 0.12);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 999px;
+
+    --shadow-soft: 0 2px 16px rgba(22, 61, 98, 0.06);
+    --shadow-glass: 0 8px 32px rgba(22, 61, 98, 0.09);
+  }
+}
