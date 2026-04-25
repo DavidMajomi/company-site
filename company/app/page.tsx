@@ -1,4 +1,5 @@
-import { Hero } from "./components/Hero";
+import { HeroCentered } from "./components/HeroCentered";
+import { HeroWithSideImage } from "./components/HeroWithSideImage";
 import { ProductsSection } from "./components/ProductsSection";
 import { ClientsSection } from "./components/ClientsSection";
 import { CtaSection } from "./components/CtaSection";
@@ -15,7 +16,16 @@ export default function Home() {
         aria-label="Hero"
       >
         <div className="mx-auto w-full px-8 py-24 md:py-32">
-          <Hero />
+          <HeroWithSideImage />
+        </div>
+      </section>
+
+      <section
+        className="hero-gradient flex min-h-screen scroll-mt-28 items-center border-t border-(--color-border-light)"
+        aria-label="Hero (centered)"
+      >
+        <div className="mx-auto w-full px-8 py-24 md:py-32">
+          <HeroCentered />
         </div>
       </section>
 

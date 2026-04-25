@@ -13,6 +13,10 @@ html {
   html {
     scroll-behavior: auto;
   }
+
+  .hero-gradient {
+    background-attachment: scroll, scroll;
+  }
 }
 
 body {
@@ -22,10 +26,12 @@ body {
   color: var(--color-text);
 }
 
+/* Viewport-fixed paint so tall sections do not stretch gradient stops. */
 .hero-gradient {
   background:
     radial-gradient(ellipse at 20% 50%, rgba(98, 213, 255, 0.12), transparent 50%),
     linear-gradient(160deg, #163d62 0%, #215990 100%);
+  background-attachment: fixed, fixed;
 }
 
 .cta-gradient {
