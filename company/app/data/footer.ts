@@ -13,13 +13,13 @@ export const footerContactLines: FooterContactLine[] = [
   },
   {
     variant: "link",
-    href: "mailto:info@company.com",
-    label: "info@company.com",
+    href: "mailto:info@vatheon.com",
+    label: "info@vatheon.com",
   },
   {
     variant: "link",
-    href: "https://www.company.com",
-    label: "www.company.com",
+    href: "https://www.vatheon.com",
+    label: "www.vatheon.com",
     external: true,
   },
 ];

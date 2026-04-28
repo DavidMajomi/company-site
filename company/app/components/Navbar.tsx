@@ -17,10 +17,10 @@ export function Navbar() {
       >
         <Link
           href="/"
-          aria-label="Company Name"
+          aria-label="Vatheon Systems"
           className="inline-flex items-center gap-0 text-sm font-bold tracking-[0.08em] text-(--color-white-text)"
         >
-          Company Name
+          Vatheon Systems
         </Link>
 
         <ul className="flex items-center gap-1 md:gap-2">

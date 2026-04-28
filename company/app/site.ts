@@ -2,17 +2,17 @@
  * Single source for public site name, positioning copy and page metadata strings.
  * Root layout uses `title.template` so pages only set the segment before ` | ${site.name}`.
  */
-const name = "company";
+const name = "Vatheon Systems";
 
 export const site = {
   name,
   /** All-caps label for nav and footer */
-  nameDisplay: "COMPANY",
-  tagline: "Technologies For Achieving Excellence",
+  nameDisplay: "VATHEON SYSTEMS",
+  tagline: "Surfing the Frontier",
   heroHeadline:
-    "Big money headline",
+    "Vatheon Systems",
   heroLead:
-    "The technologies you need for achieving excellence. We deliver IT consulting, project management, outsourcing, training and enterprise solutions spanning loan origination, digital banking channels, fraud prevention, ERP, CRM and cloud migration.",
+    "Vatheon Systems provides frontier solutions and services for modern business needs",
   /** Default meta description (home + fallback) */
   defaultDescription:
     "Default Meta description",
@@ -20,7 +20,7 @@ export const site = {
     services:
       "IT consulting, project management, outsourcing, training, mobile app development and enterprise application development for organizations that need practical delivery support.",
     products:
-      "Loan origination, Company Banking Channels, payments fraud prevention, ERP, CRM and cloud migration acceleration—five solution areas we deliver with partners and proven technology.",
+      "Loan origination, Vatheon Systems Banking Channels, payments fraud prevention, ERP, CRM and cloud migration acceleration—five solution areas we deliver with partners and proven technology.",
     contact: `Reach ${name} by phone, email, or web. Talk to our team about technologies and solutions for your organization.`,
   },
   cta: {
