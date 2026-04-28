@@ -29,3 +29,5 @@ export const primaryNavLinks: NavLink[] = [
   servicesNav,
   contactNav,
 ];
+
+export { industries } from "./industries";
