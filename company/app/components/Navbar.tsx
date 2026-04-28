@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { primaryNavLinks } from "../data/navigation";
 import { industries } from "../data/navigation";
-import { Button } from "./ui/button";
+
+const navLinkClass =
+  "inline-flex h-8 items-center justify-center rounded-md px-3 text-sm text-slate-300 transition-all hover:bg-white/5 hover:text-(--color-accent) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
 
 export function Navbar() {
   return (
@@ -28,14 +30,9 @@ export function Navbar() {
         <ul className="flex items-center gap-1 md:gap-2 ">
           {industries.map((item) => (
             <li key={item.href}>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-slate-300 hover:text-(--color-accent) hover:bg-white/5"
-                asChild
-              >
-                <Link href={item.href}>{item.label}</Link>
-              </Button>
+              <Link href={item.href} className={navLinkClass}>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -43,14 +40,9 @@ export function Navbar() {
         <ul className="flex items-center gap-1 md:gap-2">
           {primaryNavLinks.map((item) => (
             <li key={item.href}>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-slate-300 hover:text-(--color-accent) hover:bg-white/5"
-                asChild
-              >
-                <Link href={item.href}>{item.label}</Link>
-              </Button>
+              <Link href={item.href} className={navLinkClass}>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
