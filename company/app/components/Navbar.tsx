@@ -8,7 +8,7 @@ import { primaryNavLinks } from "../data/navigation";
 import { industries } from "../data/navigation";
 
 const baseNavClass =
-  "fixed top-4 left-4 right-4 z-50 bg-linear-to-b backdrop-blur-2xl backdrop-saturate-150 px-2 sm:px-4 py-3 rounded-2xl overflow-hidden flex flex-wrap items-center justify-center sm:justify-between border transition-colors before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border";
+  "fixed top-4 left-4 right-4 z-50 bg-linear-to-b backdrop-blur-2xl backdrop-saturate-150 px-2 sm:px-4 py-3 rounded-2xl overflow-hidden flex flex-wrap items-center justify-center gap-2 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-4 border transition-colors before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border";
 
 const baseLinkClass =
   "inline-flex h-8 items-center justify-center rounded-md px-3 text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
@@ -68,18 +68,16 @@ export function Navbar() {
 
   return (
     <header className="sticky z-10 mx-auto w-full max-w-6xl">
-      <nav
-        className={clsx(baseNavClass, state.nav)}
-      >
+      <nav className={clsx(baseNavClass, state.nav)}>
         <Link
           href="/"
           aria-label="Vatheon Systems"
-          className={clsx(baseBrandClass, state.brand)}
+          className={clsx(baseBrandClass, state.brand, "sm:justify-self-start")}
         >
           Vatheon Systems
         </Link>
 
-        <ul className="flex items-center gap-1 md:gap-2 ">
+        <ul className="flex items-center gap-1 md:gap-2 sm:justify-self-center">
           {industries.map((item) => (
             <li key={item.href}>
               <Link href={item.href} className={navLinkClass}>
@@ -89,7 +87,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <ul className="flex items-center gap-1 md:gap-2">
+        <ul className="flex items-center gap-1 md:gap-2 sm:justify-self-end">
           {primaryNavLinks.map((item) => (
             <li key={item.href}>
               <Link href={item.href} className={navLinkClass}>
