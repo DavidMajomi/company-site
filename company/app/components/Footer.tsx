@@ -1,9 +1,72 @@
 import Link from "next/link";
 import { footerContactLines } from "../data/footer";
-import { primaryNavLinks } from "../data/navigation";
+import { industries, primaryNavLinks } from "../data/navigation";
 import { site } from "../site";
 
+type FooterItem = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+type FooterSection = {
+  title: string;
+  items: FooterItem[];
+  useNextLink: boolean;
+};
+
+const sectionTitleClassName =
+  "mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400";
+const sectionLinkClassName = "transition hover:text-(--color-accent)";
+
+function FooterSectionList({ section }: { section: FooterSection }) {
+  return (
+    <div>
+      <h3 className={sectionTitleClassName}>{section.title}</h3>
+      <ul className="space-y-1">
+        {section.items.map((item) => (
+          <li key={item.href}>
+            {section.useNextLink ? (
+              <Link href={item.href} className={sectionLinkClassName}>
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                href={item.href}
+                className={sectionLinkClassName}
+                {...(item.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                {item.label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function Footer() {
+  const sections: FooterSection[] = [
+    {
+      title: "Industries",
+      items: industries,
+      useNextLink: true,
+    },
+    {
+      title: "Links",
+      items: primaryNavLinks,
+      useNextLink: true,
+    },
+    {
+      title: "Contact",
+      items: footerContactLines,
+      useNextLink: false,
+    },
+  ];
+
   return (
     <footer className="border-t border-(--color-border-light) bg-(--color-primary)">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 text-sm text-slate-300 sm:flex-row sm:items-start sm:justify-between sm:px-6">
@@ -17,44 +80,9 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-6 text-xs sm:flex-row sm:gap-12 sm:text-sm">
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-              Contact
-            </h3>
-            <ul className="space-y-1">
-              {footerContactLines.map((line) => (
-                <li key={line.href}>
-                  <a
-                    href={line.href}
-                    className="transition hover:text-(--color-accent)"
-                    {...(line.external
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                  >
-                    {line.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-              Links
-            </h3>
-            <ul className="space-y-1">
-              {primaryNavLinks.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="transition hover:text-(--color-accent)"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {sections.map((section) => (
+            <FooterSectionList key={section.title} section={section} />
+          ))}
         </div>
       </div>
 

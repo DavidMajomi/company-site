@@ -8,11 +8,11 @@ export const site = {
   name,
   /** All-caps label for nav and footer */
   nameDisplay: "VATHEON SYSTEMS",
-  tagline: "Surfing the Frontier",
+  tagline: "",
   heroHeadline:
     "Vatheon Systems",
   heroLead:
-    "Vatheon Systems provides frontier solutions and services for modern business needs",
+    "Build Scalable Production Systems with us",
   /** Default meta description (home + fallback) */
   defaultDescription:
     "Default Meta description",

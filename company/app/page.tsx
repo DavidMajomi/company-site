@@ -11,7 +11,7 @@ export default function Home() {
       <HomeHashScroller />
       <section
         id="hero"
-        className="hero-gradient flex min-h-screen scroll-mt-28 items-center"
+        className="bg-[#fc6b03] flex min-h-screen scroll-mt-28 items-center"
         aria-label="Hero"
       >
         <div className="mx-auto w-full px-8 py-24 md:py-32">
