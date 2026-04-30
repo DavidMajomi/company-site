@@ -9,7 +9,7 @@ import {
 } from "./NavLinkLists";
 
 const baseBrandClass =
-  "inline-flex items-center gap-0 text-sm font-bold tracking-[0.08em] transition-colors";
+  "inline-flex items-center gap-0 text-base font-bold tracking-[0.08em] transition-colors";
 
 const closeButtonClass =
   "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20";
@@ -59,7 +59,7 @@ export function MobileNavOverlay({
             className={clsx(
               baseBrandClass,
               appearance.overlayHeading,
-              "text-base tracking-[0.06em]",
+              "text-lg tracking-[0.06em]",
             )}
             onClick={onClose}
           >
@@ -81,7 +81,7 @@ export function MobileNavOverlay({
         <nav className="mt-8 min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <p
             className={clsx(
-              "text-xs font-semibold uppercase tracking-[0.14em]",
+              "text-sm font-semibold uppercase tracking-[0.14em]",
               appearance.overlayMuted,
             )}
           >
@@ -98,7 +98,7 @@ export function MobileNavOverlay({
 
           <p
             className={clsx(
-              "mt-10 text-xs font-semibold uppercase tracking-[0.14em]",
+              "mt-10 text-sm font-semibold uppercase tracking-[0.14em]",
               appearance.overlayMuted,
             )}
           >
@@ -107,7 +107,7 @@ export function MobileNavOverlay({
           <ul className="mt-4 columns-1 gap-x-10 gap-y-1 sm:columns-2">
             <OverlayNavLinkItems
               items={primaryNavLinks}
-              itemClassName="block py-2 text-base font-medium"
+              itemClassName="block py-2 text-lg font-medium"
               linkClassName={appearance.overlayLink}
               onNavigate={onClose}
               listItemClassName="break-inside-avoid py-1"

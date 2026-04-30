@@ -8,7 +8,7 @@ const mobileBarClass =
   "fixed top-4 left-4 right-4 z-50 flex lg:hidden items-center justify-between gap-3 px-1";
 
 const circleBtnBase =
-  "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
+  "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
 
 type Props = {
   appearance: NavbarAppearance;
