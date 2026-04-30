@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { clsx } from "clsx";
 import {
-  baseBrandClass,
-  baseLinkClass,
-  desktopNavClass,
   type NavbarAppearance,
 } from "./navbar-styles";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { DesktopNavListItems, type NavItem } from "./NavLinkLists";
+
+const desktopNavClass =
+  "fixed top-4 left-4 right-4 z-50 hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4 bg-linear-to-b backdrop-blur-2xl backdrop-saturate-150 px-4 py-3 rounded-2xl overflow-hidden border transition-colors before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border";
+
+const baseLinkClass =
+  "inline-flex h-8 items-center justify-center rounded-md px-3 text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
+
+const baseBrandClass =
+  "inline-flex items-center gap-0 text-sm font-bold tracking-[0.08em] transition-colors";
 
 type Props = {
   appearance: NavbarAppearance;

@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
-import { baseBrandClass, type NavbarAppearance } from "./navbar-styles";
+import { type NavbarAppearance } from "./navbar-styles";
 import { BrandMarkIcon } from "./NavbarIcons";
 import {
   OverlayNavLinkItems,
   type NavItem,
 } from "./NavLinkLists";
+
+const baseBrandClass =
+  "inline-flex items-center gap-0 text-sm font-bold tracking-[0.08em] transition-colors";
 
 const closeButtonClass =
   "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20";

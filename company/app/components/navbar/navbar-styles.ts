@@ -1,18 +1,3 @@
-export const desktopNavClass =
-  "fixed top-4 left-4 right-4 z-50 hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4 bg-linear-to-b backdrop-blur-2xl backdrop-saturate-150 px-4 py-3 rounded-2xl overflow-hidden border transition-colors before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border";
-
-export const mobileBarClass =
-  "fixed top-4 left-4 right-4 z-50 flex lg:hidden items-center justify-between gap-3 px-1";
-
-export const baseLinkClass =
-  "inline-flex h-8 items-center justify-center rounded-md px-3 text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
-
-export const baseBrandClass =
-  "inline-flex items-center gap-0 text-sm font-bold tracking-[0.08em] transition-colors";
-
-export const circleBtnBase =
-  "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
-
 export const stateClasses = {
   hero: {
     nav: "from-white/22 to-white/8 border-white/20 shadow-[0_12px_34px_rgba(2,10,24,0.28)] before:border-white/15",
