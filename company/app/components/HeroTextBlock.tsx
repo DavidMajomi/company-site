@@ -16,7 +16,7 @@ export function HeroTextBlock({ align = "left", className = "" }: HeroTextBlockP
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
         {site.tagline}
       </p>
-      <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+      <h1 className="text-4xl font-bold leading-tight text-[#03a1fc] md:text-6xl">
         {site.heroHeadline}
       </h1>
       <p className="pt-4 text-2xl leading-relaxed text-slate-300">

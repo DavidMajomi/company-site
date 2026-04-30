@@ -10,7 +10,7 @@ export const site = {
   nameDisplay: "VATHEON SYSTEMS",
   tagline: "",
   heroHeadline:
-    "Vatheon Systems",
+    "VATHEON SYSTEMS",
   heroLead:
     "Build Scalable Production Systems with us",
   /** Default meta description (home + fallback) */
@@ -25,7 +25,7 @@ export const site = {
   },
   cta: {
     heading:
-      "Please contact us today to discover the technologies you need for achieving excellence.",
+      "Contact us today to discover the technologies you need for achieving excellence.",
     subheading:
       "Talk to our team to learn how we can empower your organization with the right technologies and solutions.",
   },
