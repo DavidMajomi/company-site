@@ -1,15 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { type NavbarAppearance } from "./navbar-styles";
-import { BrandMarkIcon } from "./NavbarIcons";
 import {
   OverlayNavLinkItems,
   type NavItem,
 } from "./NavLinkLists";
 
 const baseBrandClass =
-  "inline-flex items-center gap-0 text-base font-bold tracking-[0.08em] transition-colors";
+  "inline-flex items-center transition-opacity hover:opacity-95";
 
 const closeButtonClass =
   "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20";
@@ -59,14 +59,17 @@ export function MobileNavOverlay({
             className={clsx(
               baseBrandClass,
               appearance.overlayHeading,
-              "text-lg tracking-[0.06em]",
+              "text-lg",
             )}
             onClick={onClose}
           >
-            <span className="mr-2 inline-flex align-middle">
-              <BrandMarkIcon className="opacity-90" />
-            </span>
-            {NAV_BRAND_NAME}
+            <Image
+              src="/vatheon-v-mark.svg"
+              alt={NAV_BRAND_NAME}
+              width={44}
+              height={44}
+              className="h-7 w-7"
+            />
           </Link>
           <button
             type="button"

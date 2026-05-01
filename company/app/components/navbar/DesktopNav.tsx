@@ -1,8 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { clsx } from "clsx";
-import {
-  type NavbarAppearance,
-} from "./navbar-styles";
+import { type NavbarAppearance } from "./navbar-styles";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { DesktopNavListItems, type NavItem } from "./NavLinkLists";
 
@@ -13,7 +12,7 @@ const baseLinkClass =
   "inline-flex h-9 items-center justify-center rounded-md px-3 text-base transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
 
 const baseBrandClass =
-  "inline-flex items-center gap-0 text-base font-bold tracking-[0.08em] transition-colors";
+  "inline-flex items-center transition-opacity hover:opacity-95";
 
 type Props = {
   appearance: NavbarAppearance;
@@ -25,10 +24,7 @@ export function DesktopNav({ appearance, industries, primaryNavLinks }: Props) {
   const navLinkClass = clsx(baseLinkClass, appearance.link);
 
   return (
-    <nav
-      className={clsx(desktopNavClass, appearance.nav)}
-      aria-label="Main"
-    >
+    <nav className={clsx(desktopNavClass, appearance.nav)} aria-label="Main">
       <DesktopNavbarBrand brandClassName={appearance.brand} />
 
       <ul className="flex items-center gap-1 justify-self-center md:gap-2">
@@ -52,7 +48,14 @@ function DesktopNavbarBrand({ brandClassName }: { brandClassName: string }) {
       aria-label={NAV_BRAND_NAME}
       className={clsx(baseBrandClass, brandClassName, "justify-self-start")}
     >
-      {NAV_BRAND_NAME}
+      <Image
+        src="/vatheon-full.svg"
+        alt={NAV_BRAND_NAME}
+        width={270}
+        height={10}
+        className="h-6 w-auto"
+        priority
+      />
     </Link>
   );
 }
