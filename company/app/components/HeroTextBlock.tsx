@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { contactNav } from "../data/navigation";
 import { site } from "../site";
 import { Button } from "../shared/Button";
@@ -7,7 +8,10 @@ type HeroTextBlockProps = {
   className?: string;
 };
 
-export function HeroTextBlock({ align = "left", className = "" }: HeroTextBlockProps) {
+export function HeroTextBlock({
+  align = "left",
+  className = "",
+}: HeroTextBlockProps) {
   const isCentered = align === "center";
   return (
     <div
@@ -18,8 +22,20 @@ export function HeroTextBlock({ align = "left", className = "" }: HeroTextBlockP
           {site.tagline}
         </p>
       ) : null}
-      <h1 className="text-4xl font-bold leading-tight text-(--color-accent) md:text-6xl">
-        {site.heroHeadline}
+      <h1
+        className={`pt-2 ${isCentered ? "mx-auto" : ""}`}
+        aria-label={site.heroHeadline}
+      >
+        <span className="sr-only">{site.heroHeadline}</span>
+        <Image
+          src="/vatheon_systems_black.svg"
+          alt="Vatheon Systems logo"
+          aria-hidden="true"
+          width={4229}
+          height={300}
+          priority
+          className={`h-auto w-full max-w-4xl ${isCentered ? "mx-auto" : ""}`}
+        />
       </h1>
       <p className="pt-4 text-2xl leading-relaxed text-slate-300">
         {site.heroLead}
