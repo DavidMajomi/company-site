@@ -12,7 +12,7 @@ export const site = {
   heroHeadline:
     "VATHEON SYSTEMS",
   heroLead:
-    "Build Scalable Production Systems with us",
+    "We build Automated Solutions for every business need.",
   /** Default meta description (home + fallback) */
   defaultDescription:
     "Default Meta description",
