@@ -49,7 +49,7 @@ function DesktopNavbarBrand({ brandClassName }: { brandClassName: string }) {
       className={clsx(baseBrandClass, brandClassName, "justify-self-start")}
     >
       <Image
-        src="/vatheon-full.svg"
+        src="/vatheon_full.svg"
         alt={NAV_BRAND_NAME}
         width={270}
         height={10}
