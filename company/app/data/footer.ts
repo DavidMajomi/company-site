@@ -8,8 +8,8 @@ type FooterContactLine = {
 export const footerContactLines: FooterContactLine[] = [
   {
     variant: "link",
-    href: "phone",
-    label: "Phone",
+    href: "tel:+1-555-000-0000",
+    label: "+1 (555) 000-0000",
   },
   {
     variant: "link",

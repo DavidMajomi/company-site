@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { footerContactLines } from "../data/footer";
 import { productSuiteNav } from "../data/navigation";
+import { StandardPageContent } from "../components/StandardPageContent";
 import { site } from "../site";
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function ContactPage() {
   const links = footerContactLines;
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 pb-24 pt-28 sm:px-6 md:pb-28 md:pt-32">
+    <StandardPageContent>
       <section className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">
           Contact
@@ -174,6 +175,6 @@ export default function ContactPage() {
         </Link>{" "}
         to see what we offer.
       </p>
-    </div>
+    </StandardPageContent>
   );
 }

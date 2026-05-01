@@ -1,11 +1,6 @@
-export type Service = {
-  slug: string;
-  title: string;
-  description: string;
-  overview: string;
-  capabilities: string[];
-  outcomes: string[];
-};
+import type { Offering } from "./offerings";
+
+export type Service = Offering;
 
 export const services: Service[] = [
   {

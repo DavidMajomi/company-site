@@ -25,16 +25,3 @@ export function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
-export function BrandMarkIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      width={18}
-      height={18}
-      aria-hidden
-    >
-      <path fill="currentColor" d="M12 5 21 19H3L12 5z" />
-    </svg>
-  );
-}

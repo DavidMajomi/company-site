@@ -51,12 +51,9 @@ export default async function ProductDetailPage({ params }: Props) {
         currentLabel={product.title}
       />
 
-      <ProductDetailHeader
-        product={product}
-        isLoanOrigination={isLoanOrigination}
-      />
+      <ProductDetailHeader product={product} />
 
-      <LoanOriginationSection isVisible={isLoanOrigination} />
+      {isLoanOrigination ? <LoanOriginationSection /> : null}
 
       <OfferingDetailPanels
         capabilities={product.capabilities}

@@ -4,13 +4,13 @@ import type { Product } from "../data/products";
 
 type ProductDetailHeaderProps = {
   product: Product;
-  isLoanOrigination: boolean;
 };
 
 export function ProductDetailHeader({
   product,
-  isLoanOrigination,
 }: ProductDetailHeaderProps) {
+  const isLoanOrigination = product.slug === "loan-origination";
+
   if (isLoanOrigination) {
     return (
       <header className="mt-8">

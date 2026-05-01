@@ -6,8 +6,8 @@ type OfferingDetailPanelsProps = {
 function BulletList({ items }: { items: string[] }) {
   return (
     <ul className="mt-4 space-y-3 text-sm leading-relaxed text-(--color-text-muted)">
-      {items.map((item) => (
-        <li key={item} className="flex gap-3">
+      {items.map((item, index) => (
+        <li key={index} className="flex gap-3">
           <span
             aria-hidden="true"
             className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"

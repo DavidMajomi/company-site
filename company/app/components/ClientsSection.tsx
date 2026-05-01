@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { contactNav } from "../data/navigation";
 
 const partners: { name: string; src: string }[] = [
@@ -39,12 +40,12 @@ export function ClientsSection() {
           </div>
         ))}
       </div>
-      <a
+      <Link
         href={contactNav.href}
         className="mt-8 inline-flex items-center text-sm font-semibold text-(--color-accent) transition hover:text-sky-600"
       >
         Get in touch →
-      </a>
+      </Link>
     </section>
   );
 }

@@ -70,7 +70,7 @@ export function Navbar() {
   const navLists = { industries, primaryNavLinks };
 
   return (
-    <header className="sticky z-10 mx-auto w-full max-w-6xl">
+    <header className="sticky top-0 z-10 mx-auto w-full max-w-6xl">
       <MobileNavBar
         appearance={appearance}
         panelId={panelId}
