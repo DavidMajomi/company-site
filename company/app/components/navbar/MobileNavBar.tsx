@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
-import { type NavbarAppearance } from "./navbar-styles";
+import { type NavbarAppearance } from "./Navbar";
 import { MenuIcon } from "./NavbarIcons";
 
 const mobileBarClass =
@@ -26,8 +26,12 @@ export function MobileNavBar({
   mobileOpen,
   onToggleMenu,
 }: Props) {
-  const circleClass = clsx(circleBtnBase, appearance.circle);
-  const brandClass = clsx(brandLinkClass, appearance.circle);
+  const circleShadowClass =
+    appearance.tone === "hero"
+      ? "shadow-[0_8px_24px_rgba(2,10,24,0.34)]"
+      : "shadow-[0_8px_24px_rgba(2,10,24,0.3)]";
+  const circleClass = clsx(circleBtnBase, circleShadowClass, appearance.circle);
+  const brandClass = clsx(brandLinkClass, circleShadowClass, appearance.circle);
 
   return (
     <div className={mobileBarClass}>

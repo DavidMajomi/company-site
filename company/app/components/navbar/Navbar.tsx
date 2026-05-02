@@ -7,7 +7,39 @@ import { industries } from "../../data/navigation";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNavBar } from "./MobileNavBar";
 import { MobileNavOverlay } from "./MobileNavOverlay";
-import { stateClasses } from "./navbar-styles";
+import navbarStyles from "./navbar.module.css";
+import sharedStyles from "./navbar-shared.module.css";
+
+const stateClasses = {
+  hero: {
+    tone: "hero",
+    nav: navbarStyles.navHero,
+    link: navbarStyles.linkHero,
+    brand: "",
+    circle: navbarStyles.circleHero,
+    overlay: navbarStyles.overlayHero,
+    overlayBorder: navbarStyles.overlayBorder,
+    overlayMuted: sharedStyles.overlayMuted,
+    overlayHeading: sharedStyles.overlayHeading,
+    overlayLink: sharedStyles.overlayLink,
+    cta: navbarStyles.cta,
+  },
+  content: {
+    tone: "content",
+    nav: navbarStyles.navContent,
+    link: navbarStyles.linkContent,
+    brand: sharedStyles.brandContent,
+    circle: navbarStyles.circleContent,
+    overlay: navbarStyles.overlayContent,
+    overlayBorder: navbarStyles.overlayBorder,
+    overlayMuted: sharedStyles.overlayMuted,
+    overlayHeading: sharedStyles.overlayHeading,
+    overlayLink: sharedStyles.overlayLink,
+    cta: navbarStyles.cta,
+  },
+} as const;
+
+export type NavbarAppearance = (typeof stateClasses)[keyof typeof stateClasses];
 
 export function Navbar() {
   const pathname = usePathname();

@@ -84,13 +84,13 @@ export default function ContactPage() {
           Talk to us about your next project.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-(--color-text-muted)">
-          Reach out by phone, email, or through our website. We keep the
-          process straightforward and respond with practical next steps.
+          Reach out by phone, email, or through our website. We keep the process
+          straightforward and respond with practical next steps.
         </p>
       </section>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <section className="rounded-(--radius-md) border border-(--color-border) bg-white p-6 shadow-(--shadow-soft) md:p-8">
+        <section className="rounded-md border border-(--color-border) bg-white p-6 shadow-(--shadow-soft) md:p-8">
           <h2 className="text-lg font-semibold text-(--color-primary)">
             Contact details
           </h2>
@@ -144,21 +144,27 @@ export default function ContactPage() {
                   aria-hidden="true"
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
-                <span>We review your message and route it to the right person.</span>
+                <span>
+                  We review your message and route it to the right person.
+                </span>
               </li>
               <li className="flex gap-3">
                 <span
                   aria-hidden="true"
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
-                <span>We reply with the best next step, usually by email or phone.</span>
+                <span>
+                  We reply with the best next step, usually by email or phone.
+                </span>
               </li>
               <li className="flex gap-3">
                 <span
                   aria-hidden="true"
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
-                <span>If useful, we set up a short call to clarify scope or timing.</span>
+                <span>
+                  If useful, we set up a short call to clarify scope or timing.
+                </span>
               </li>
             </ul>
           </section>

@@ -1,0 +1,19 @@
+.brandContent {
+  color: #fff;
+}
+
+.overlayMuted {
+  color: rgb(148 163 184);
+}
+
+.overlayHeading {
+  color: #fff;
+}
+
+.overlayLink {
+  color: rgb(241 245 249 / 0.95);
+}
+
+.overlayLink:hover {
+  color: #fff;
+}

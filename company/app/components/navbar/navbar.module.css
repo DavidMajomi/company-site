@@ -1,0 +1,76 @@
+.navHero {
+  border-color: rgb(255 255 255 / 0.14);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(2 6 23 / 0.72),
+    rgb(15 23 42 / 0.58)
+  );
+}
+
+.navContent {
+  border-color: rgb(255 255 255 / 0.12);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(2 6 23 / 0.84),
+    rgb(15 23 42 / 0.7)
+  );
+}
+
+.linkHero:hover {
+  background: rgb(255 255 255 / 0.15);
+  color: #fff;
+}
+
+.linkContent {
+  color: rgb(241 245 249);
+}
+
+.linkContent:hover {
+  background: rgb(255 255 255 / 0.1);
+  color: #fff;
+}
+
+.circleHero {
+  border-color: rgb(255 255 255 / 0.24);
+  background: rgb(15 23 42 / 0.62);
+  color: #fff;
+  backdrop-filter: blur(12px) saturate(1.5);
+}
+
+.circleHero:hover {
+  background: rgb(15 23 42 / 0.78);
+}
+
+.circleContent {
+  border-color: rgb(255 255 255 / 0.14);
+  background: rgb(15 23 42 / 0.74);
+  color: rgb(241 245 249);
+  backdrop-filter: blur(12px);
+}
+
+.circleContent:hover {
+  background: rgb(15 23 42 / 0.9);
+}
+
+.overlayHero {
+  background: rgb(2 6 23 / 0.82);
+  backdrop-filter: blur(40px);
+}
+
+.overlayContent {
+  background: rgb(2 6 23 / 0.88);
+  backdrop-filter: blur(40px);
+}
+
+.overlayBorder {
+  border-color: rgb(255 255 255 / 0.12);
+}
+
+.cta {
+  background: #fff;
+  color: rgb(15 23 42);
+}
+
+.cta:hover {
+  background: rgb(255 255 255 / 0.95);
+}

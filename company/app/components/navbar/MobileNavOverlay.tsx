@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
-import { type NavbarAppearance } from "./navbar-styles";
+import { type NavbarAppearance } from "./Navbar";
 import {
   OverlayNavLinkItems,
   type NavItem,
