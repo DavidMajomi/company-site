@@ -46,7 +46,7 @@ export function OfferingSection({
           {title}
         </h2>
       )}
-      <p className="mt-3 max-w-2xl text-(--color-text-muted)">{description}</p>
+      <p className="mt-3 text-(--color-text-muted)">{description}</p>
       {children}
       {!isPage && actions.length > 0 ? (
         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
