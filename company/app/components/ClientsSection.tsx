@@ -19,7 +19,7 @@ export function ClientsSection() {
       <h2 className="text-2xl font-bold tracking-tight text-(--color-primary) md:text-3xl">
         Our Clients
       </h2>
-      <p className="mt-3 max-w-2xl text-(--color-text-muted)">
+      <p className="mt-3 text-(--color-text-muted)">
         We support organizations across banking and enterprise with solutions
         built on trusted platforms—helping our clients move faster with
         confidence.
