@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { contactNav } from "../data/navigation";
 
-const partners: { name: string; src: string }[] = [
+const logos: { name: string; src: string }[] = [
   { name: "FintelligenX", src: "/partners/fintelligenx.webp" },
   { name: "Oracle", src: "/partners/oracle.svg" },
   { name: "Microsoft", src: "/partners/microsoft.svg" },
@@ -15,16 +15,17 @@ const partners: { name: string; src: string }[] = [
 
 export function ClientsSection() {
   return (
-    <section id="partners" className="scroll-mt-6">
+    <section id="clients" className="scroll-mt-6">
       <h2 className="text-2xl font-bold tracking-tight text-(--color-primary) md:text-3xl">
-        Our Partners
+        Our Clients
       </h2>
       <p className="mt-3 max-w-2xl text-(--color-text-muted)">
-        We work with partners who are leaders in their domains. Together with
-        our partners, we deliver unparalleled value to our clients.
+        We support organizations across banking and enterprise with solutions
+        built on trusted platforms—helping our clients move faster with
+        confidence.
       </p>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4 md:gap-6">
-        {partners.map(({ name, src }) => (
+        {logos.map(({ name, src }) => (
           <div
             key={name}
             className="flex min-h-34 min-w-48 max-w-[16rem] flex-1 basis-48 items-center justify-center rounded-md border border-(--color-border) bg-white px-6 py-5 shadow-(--shadow-soft)"
