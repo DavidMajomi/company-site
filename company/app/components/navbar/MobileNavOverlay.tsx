@@ -127,7 +127,7 @@ export function MobileNavOverlay({
             )}
             onClick={onClose}
           >
-            Get In Touch
+            Contact
           </Link>
         </div>
       </div>

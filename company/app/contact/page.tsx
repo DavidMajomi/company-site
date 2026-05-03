@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { footerContactLines } from "../data/footer";
-import { productSuiteNav } from "../data/navigation";
+import { productsNav } from "../data/navigation";
 import { StandardPageContent } from "../components/StandardPageContent";
 import { site } from "../site";
 
@@ -174,10 +174,10 @@ export default function ContactPage() {
       <p className="mt-12 text-center text-sm text-(--color-text-muted)">
         Or browse the{" "}
         <Link
-          href={productSuiteNav.href}
+          href={productsNav.href}
           className="font-semibold text-(--color-accent) underline decoration-sky-500/35 underline-offset-4 transition hover:text-sky-600 hover:decoration-sky-500/70"
         >
-          product suite
+          products
         </Link>{" "}
         to see what we offer.
       </p>

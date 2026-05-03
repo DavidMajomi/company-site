@@ -7,7 +7,7 @@ import { OfferingGrid } from "../../components/OfferingGrid";
 import { ProductDetailHeader } from "../../components/ProductDetailHeader";
 import { ProductCard } from "../../components/ProductCard";
 import { StandardPageContent } from "../../components/StandardPageContent";
-import { productSuiteNav } from "../../data/navigation";
+import { productsNav } from "../../data/navigation";
 import { getProductBySlug, products } from "../../data/products";
 import { site } from "../../site";
 
@@ -46,8 +46,8 @@ export default async function ProductDetailPage({ params }: Props) {
       contentWidth={isLoanOrigination ? "extra-wide" : "standard"}
     >
       <OfferingBreadcrumb
-        parentHref={productSuiteNav.href}
-        parentLabel={productSuiteNav.label}
+        parentHref={productsNav.href}
+        parentLabel={productsNav.label}
         currentLabel={product.title}
       />
 

@@ -1,4 +1,4 @@
-import { contactNav, productSuiteNav } from "../data/navigation";
+import { contactNav, productsNav } from "../data/navigation";
 import { site } from "../site";
 import { Button } from "../shared/Button";
 
@@ -17,8 +17,8 @@ export function CtaSection() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button href={contactNav.href}>Contact us</Button>
-          <Button href={productSuiteNav.href} variant="ghost">
-            Our product suite
+          <Button href={productsNav.href} variant="ghost">
+            Our products
           </Button>
         </div>
       </div>

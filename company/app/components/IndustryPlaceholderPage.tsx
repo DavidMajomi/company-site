@@ -1,6 +1,6 @@
 import type { CSSProperties, ComponentPropsWithoutRef } from "react";
 import { Button } from "../shared/Button";
-import { contactNav, productSuiteNav, servicesNav } from "../data/navigation";
+import { contactNav, productsNav, servicesNav } from "../data/navigation";
 import type { IndustryPage } from "../data/industries";
 import { StandardPageContent } from "./StandardPageContent";
 import styles from "./IndustryPlaceholderPage.module.css";
@@ -12,7 +12,7 @@ type IndustryPlaceholderPageProps = {
 const ctas: ComponentPropsWithoutRef<typeof Button>[] = [
   { href: contactNav.href, children: "Talk to us" },
   { href: servicesNav.href, variant: "ghost", children: "View services" },
-  { href: productSuiteNav.href, variant: "ghost", children: "View product suite" },
+  { href: productsNav.href, variant: "ghost", children: "View products" },
 ];
 
 function rise(delayMs: number, className: string) {

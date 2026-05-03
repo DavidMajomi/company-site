@@ -1,5 +1,5 @@
 import type { Product } from "../data/products";
-import { productSuiteNav } from "../data/navigation";
+import { productsNav } from "../data/navigation";
 import { OfferingCard } from "./OfferingCard";
 
 type ProductCardProps = {
@@ -15,7 +15,7 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <OfferingCard
-      href={`${productSuiteNav.href}/${product.slug}`}
+      href={`${productsNav.href}/${product.slug}`}
       title={product.title}
       description={product.description}
       variant={variant}

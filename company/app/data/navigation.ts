@@ -8,9 +8,9 @@ const homeNav: NavLink = {
   label: "Home",
 };
 
-export const productSuiteNav: NavLink = {
+export const productsNav: NavLink = {
   href: "/products",
-  label: "Product suite",
+  label: "Products",
 };
 
 export const servicesNav: NavLink = {
@@ -20,12 +20,12 @@ export const servicesNav: NavLink = {
 
 export const contactNav: NavLink = {
   href: "/contact",
-  label: "Get In Touch",
+  label: "Contact",
 };
 
 export const primaryNavLinks: NavLink[] = [
   homeNav,
-  productSuiteNav,
+  productsNav,
   servicesNav,
   contactNav,
 ];

@@ -1,4 +1,4 @@
-import { contactNav, productSuiteNav } from "../data/navigation";
+import { contactNav, productsNav } from "../data/navigation";
 import { ProductGrid } from "./ProductGrid";
 import { OfferingSection } from "./OfferingSection";
 import { site } from "../site";
@@ -11,7 +11,7 @@ export function ProductsSection({ variant = "home" }: ProductsSectionProps) {
   return (
     <OfferingSection
       id={variant === "home" ? "products" : undefined}
-      title="Our product suite"
+      title="Our products"
       description={site.pageMeta.products}
       variant={variant}
       actions={[
@@ -21,7 +21,7 @@ export function ProductsSection({ variant = "home" }: ProductsSectionProps) {
           tone: "accent",
         },
         {
-          href: productSuiteNav.href,
+          href: productsNav.href,
           label: "Product overview page",
           tone: "primary",
         },
