@@ -16,13 +16,17 @@
   );
 }
 
+.linkHero {
+  color: #fff;
+}
+
 .linkHero:hover {
   background: rgb(255 255 255 / 0.15);
   color: #fff;
 }
 
 .linkContent {
-  color: rgb(241 245 249);
+  color: #fff;
 }
 
 .linkContent:hover {
@@ -44,7 +48,7 @@
 .circleContent {
   border-color: rgb(255 255 255 / 0.14);
   background: rgb(15 23 42 / 0.74);
-  color: rgb(241 245 249);
+  color: #fff;
   backdrop-filter: blur(12px);
 }
 
