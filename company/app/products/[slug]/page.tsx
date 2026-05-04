@@ -60,27 +60,29 @@ export default async function ProductDetailPage({ params }: Props) {
         outcomes={product.outcomes}
       />
 
-      <section className="mt-14" aria-labelledby="related-heading">
-        <h2
-          id="related-heading"
-          className="text-lg font-semibold text-(--color-primary)"
-        >
-          Other capabilities
-        </h2>
-        <OfferingGrid
-          items={otherProducts}
-          getKey={(product) => product.slug}
-          renderCard={(product) => (
-            <OfferingLinkCard
-              offering={product}
-              hrefPrefix={productsNav.href}
-              variant="compact"
-            />
-          )}
-          className="mt-4 flex flex-wrap justify-center gap-3"
-          itemClassName="w-full shrink-0 sm:w-[calc((100%-0.75rem)/2)] lg:w-[calc((100%-1.5rem)/3)]"
-        />
-      </section>
+      {otherProducts.length > 0 ? (
+        <section className="mt-14" aria-labelledby="related-heading">
+          <h2
+            id="related-heading"
+            className="text-lg font-semibold text-(--color-primary)"
+          >
+            Other capabilities
+          </h2>
+          <OfferingGrid
+            items={otherProducts}
+            getKey={(product) => product.slug}
+            renderCard={(product) => (
+              <OfferingLinkCard
+                offering={product}
+                hrefPrefix={productsNav.href}
+                variant="compact"
+              />
+            )}
+            className="mt-4 flex flex-wrap justify-center gap-3"
+            itemClassName="w-full shrink-0 sm:w-[calc((100%-0.75rem)/2)] lg:w-[calc((100%-1.5rem)/3)]"
+          />
+        </section>
+      ) : null}
     </StandardPageContent>
   );
 }
