@@ -1,9 +1,9 @@
-import { HeroCentered } from "./components/HeroCentered";
-import { ProductsSection } from "./components/ProductsSection";
 import { ClientsSection } from "./components/ClientsSection";
 import { CtaSection } from "./components/CtaSection";
-import { ServicesSection } from "./components/ServicesSection";
+import { HeroCentered } from "./components/HeroCentered";
 import { HomeHashScroller } from "./components/HomeHashScroller";
+import { ProductsHomeSection } from "./products/ProductsHomeSection";
+import { ServicesHomeSection } from "./services/ServicesHomeSection";
 
 export default function Home() {
   return (
@@ -20,9 +20,15 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-0 px-4 sm:px-6">
-        <div className="py-24"><ProductsSection /></div>
-        <div className="py-24"><ServicesSection /></div>
-        <div className="py-24"><ClientsSection /></div>
+        <div className="py-24">
+          <ProductsHomeSection />
+        </div>
+        <div className="py-24">
+          <ServicesHomeSection />
+        </div>
+        <div className="py-24">
+          <ClientsSection />
+        </div>
       </div>
       <div className="px-4 pb-20 sm:px-6">
         <div className="mx-auto max-w-6xl">

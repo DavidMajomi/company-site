@@ -1,19 +1,16 @@
+import { OfferingList } from "../components/OfferingList";
+import { OfferingSection } from "../components/OfferingSection";
 import { contactNav, productsNav } from "../data/navigation";
-import { ProductGrid } from "./ProductGrid";
-import { OfferingSection } from "./OfferingSection";
+import { products } from "../data/products";
 import { site } from "../site";
 
-type ProductsSectionProps = {
-  variant?: "home" | "page";
-};
-
-export function ProductsSection({ variant = "home" }: ProductsSectionProps) {
+export function ProductsHomeSection() {
   return (
     <OfferingSection
-      id={variant === "home" ? "products" : undefined}
+      id="products"
       title="Our products"
       description={site.pageMeta.products}
-      variant={variant}
+      variant="home"
       actions={[
         {
           href: contactNav.href,
@@ -27,7 +24,7 @@ export function ProductsSection({ variant = "home" }: ProductsSectionProps) {
         },
       ]}
     >
-      <ProductGrid />
+      <OfferingList items={products} hrefPrefix={productsNav.href} />
     </OfferingSection>
   );
 }

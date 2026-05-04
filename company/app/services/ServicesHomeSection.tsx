@@ -1,19 +1,16 @@
+import { OfferingList } from "../components/OfferingList";
+import { OfferingSection } from "../components/OfferingSection";
 import { contactNav, servicesNav } from "../data/navigation";
+import { services } from "../data/services";
 import { site } from "../site";
-import { OfferingSection } from "./OfferingSection";
-import { ServiceGrid } from "./ServiceGrid";
 
-type ServicesSectionProps = {
-  variant?: "home" | "page";
-};
-
-export function ServicesSection({ variant = "home" }: ServicesSectionProps) {
+export function ServicesHomeSection() {
   return (
     <OfferingSection
-      id={variant === "home" ? "services" : undefined}
+      id="services"
       title="Our services"
       description={site.pageMeta.services}
-      variant={variant}
+      variant="home"
       actions={[
         {
           href: contactNav.href,
@@ -27,7 +24,7 @@ export function ServicesSection({ variant = "home" }: ServicesSectionProps) {
         },
       ]}
     >
-      <ServiceGrid />
+      <OfferingList items={services} hrefPrefix={servicesNav.href} />
     </OfferingSection>
   );
 }

@@ -4,8 +4,8 @@ import { LoanOriginationSection } from "../../components/LoanOriginationSection"
 import { OfferingBreadcrumb } from "../../components/OfferingBreadcrumb";
 import { OfferingDetailPanels } from "../../components/OfferingDetailPanels";
 import { OfferingGrid } from "../../components/OfferingGrid";
+import { OfferingLinkCard } from "../../components/OfferingLinkCard";
 import { ProductDetailHeader } from "../../components/ProductDetailHeader";
-import { ProductCard } from "../../components/ProductCard";
 import { StandardPageContent } from "../../components/StandardPageContent";
 import { productsNav } from "../../data/navigation";
 import { getProductBySlug, products } from "../../data/products";
@@ -70,7 +70,13 @@ export default async function ProductDetailPage({ params }: Props) {
         <OfferingGrid
           items={otherProducts}
           getKey={(product) => product.slug}
-          renderCard={(product) => <ProductCard product={product} variant="compact" />}
+          renderCard={(product) => (
+            <OfferingLinkCard
+              offering={product}
+              hrefPrefix={productsNav.href}
+              variant="compact"
+            />
+          )}
           className="mt-4 flex flex-wrap justify-center gap-3"
           itemClassName="w-full shrink-0 sm:w-[calc((100%-0.75rem)/2)] lg:w-[calc((100%-1.5rem)/3)]"
         />

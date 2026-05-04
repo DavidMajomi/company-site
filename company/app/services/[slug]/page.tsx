@@ -4,7 +4,7 @@ import { OfferingBreadcrumb } from "../../components/OfferingBreadcrumb";
 import { OfferingDetailPanels } from "../../components/OfferingDetailPanels";
 import { OfferingGrid } from "../../components/OfferingGrid";
 import { OfferingIntro } from "../../components/OfferingIntro";
-import { ServiceCard } from "../../components/ServiceCard";
+import { OfferingLinkCard } from "../../components/OfferingLinkCard";
 import { StandardPageContent } from "../../components/StandardPageContent";
 import { servicesNav } from "../../data/navigation";
 import { getServiceBySlug, services } from "../../data/services";
@@ -64,7 +64,13 @@ export default async function ServiceDetailPage({ params }: Props) {
         <OfferingGrid
           items={otherServices}
           getKey={(item) => item.slug}
-          renderCard={(item) => <ServiceCard service={item} variant="compact" />}
+          renderCard={(item) => (
+            <OfferingLinkCard
+              offering={item}
+              hrefPrefix={servicesNav.href}
+              variant="compact"
+            />
+          )}
           className="mt-4 flex flex-wrap justify-center gap-3"
           itemClassName="w-full shrink-0 sm:w-[calc((100%-0.75rem)/2)] lg:w-[calc((100%-1.5rem)/3)]"
         />
