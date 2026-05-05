@@ -8,10 +8,13 @@ import { MenuIcon } from "./NavbarIcons";
 const mobileBarClass =
   "fixed top-4 left-4 right-4 z-50 flex lg:hidden items-center justify-between gap-3 px-1";
 
+const circleShadowClass =
+  "shadow-[0_8px_24px_rgba(22,61,98,0.32)]";
+
 const circleBtnBase =
-  "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
+  "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
 const brandLinkClass =
-  "inline-flex h-12 items-center rounded-full border px-4 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
+  "inline-flex h-12 items-center rounded-full border px-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
 
 type Props = {
   appearance: NavbarAppearance;
@@ -26,10 +29,6 @@ export function MobileNavBar({
   mobileOpen,
   onToggleMenu,
 }: Props) {
-  const circleShadowClass =
-    appearance.tone === "hero"
-      ? "shadow-[0_8px_24px_rgba(2,10,24,0.34)]"
-      : "shadow-[0_8px_24px_rgba(2,10,24,0.3)]";
   const circleClass = clsx(circleBtnBase, circleShadowClass, appearance.circle);
   const brandClass = clsx(brandLinkClass, circleShadowClass, appearance.circle);
 

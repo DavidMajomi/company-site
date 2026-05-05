@@ -12,7 +12,7 @@ const baseBrandClass =
   "inline-flex items-center transition-opacity hover:opacity-95";
 
 const closeButtonClass =
-  "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20";
+  "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/20";
 
 type Props = {
   appearance: NavbarAppearance;
@@ -122,7 +122,7 @@ export function MobileNavOverlay({
           <Link
             href="/contact"
             className={clsx(
-              "flex h-12 w-full items-center justify-center rounded-full text-base font-semibold tracking-tight transition",
+              "flex h-12 w-full items-center justify-center rounded-full text-base font-semibold tracking-tight transition-colors duration-150",
               appearance.cta,
             )}
             onClick={onClose}

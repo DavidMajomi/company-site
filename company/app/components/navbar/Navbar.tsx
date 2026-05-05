@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
-import { usePathname } from "next/navigation";
 import { primaryNavLinks } from "../../data/navigation";
 import { industries } from "../../data/navigation";
 import { DesktopNav } from "./DesktopNav";
@@ -10,70 +9,25 @@ import { MobileNavOverlay } from "./MobileNavOverlay";
 import navbarStyles from "./navbar.module.css";
 import sharedStyles from "./navbar-shared.module.css";
 
-const stateClasses = {
-  hero: {
-    tone: "hero",
-    nav: navbarStyles.navHero,
-    link: navbarStyles.linkHero,
-    brand: "",
-    circle: navbarStyles.circleHero,
-    overlay: navbarStyles.overlayHero,
-    overlayBorder: navbarStyles.overlayBorder,
-    overlayMuted: sharedStyles.overlayMuted,
-    overlayHeading: sharedStyles.overlayHeading,
-    overlayLink: sharedStyles.overlayLink,
-    cta: navbarStyles.cta,
-  },
-  content: {
-    tone: "content",
-    nav: navbarStyles.navContent,
-    link: navbarStyles.linkContent,
-    brand: sharedStyles.brandContent,
-    circle: navbarStyles.circleContent,
-    overlay: navbarStyles.overlayContent,
-    overlayBorder: navbarStyles.overlayBorder,
-    overlayMuted: sharedStyles.overlayMuted,
-    overlayHeading: sharedStyles.overlayHeading,
-    overlayLink: sharedStyles.overlayLink,
-    cta: navbarStyles.cta,
-  },
+/** Single navbar chrome everywhere — no hero scroll observe / class swapping. */
+export const navbarAppearance = {
+  nav: navbarStyles.nav,
+  link: navbarStyles.link,
+  brand: sharedStyles.brandContent,
+  circle: navbarStyles.circle,
+  overlay: navbarStyles.overlay,
+  overlayBorder: navbarStyles.overlayBorder,
+  overlayMuted: sharedStyles.overlayMuted,
+  overlayHeading: sharedStyles.overlayHeading,
+  overlayLink: sharedStyles.overlayLink,
+  cta: navbarStyles.cta,
 } as const;
 
-export type NavbarAppearance = (typeof stateClasses)[keyof typeof stateClasses];
+export type NavbarAppearance = typeof navbarAppearance;
 
 export function Navbar() {
-  const pathname = usePathname();
-  const isHomeRoute = pathname === "/";
-  const [isHeroInView, setIsHeroInView] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const panelId = useId();
-
-  useEffect(() => {
-    if (!isHomeRoute) {
-      return;
-    }
-
-    const hero = document.getElementById("hero");
-
-    if (!hero) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsHeroInView(entry.isIntersecting);
-      },
-      {
-        threshold: 0.25,
-      },
-    );
-
-    observer.observe(hero);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [isHomeRoute]);
 
   useEffect(() => {
     if (!mobileOpen) {
@@ -96,24 +50,21 @@ export function Navbar() {
     };
   }, [mobileOpen]);
 
-  const isOnHero = isHomeRoute && isHeroInView;
-  const appearance = isOnHero ? stateClasses.hero : stateClasses.content;
-
   const navLists = { industries, primaryNavLinks };
 
   return (
     <header className="sticky top-0 z-10 mx-auto w-full max-w-6xl">
       <MobileNavBar
-        appearance={appearance}
+        appearance={navbarAppearance}
         panelId={panelId}
         mobileOpen={mobileOpen}
         onToggleMenu={() => setMobileOpen((o) => !o)}
       />
 
-      <DesktopNav appearance={appearance} {...navLists} />
+      <DesktopNav appearance={navbarAppearance} {...navLists} />
 
       <MobileNavOverlay
-        appearance={appearance}
+        appearance={navbarAppearance}
         panelId={panelId}
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
