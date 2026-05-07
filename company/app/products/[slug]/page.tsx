@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LoanOriginationSection } from "../../components/LoanOriginationSection";
 import { OfferingBreadcrumb } from "../../components/OfferingBreadcrumb";
 import { OfferingDetailPanels } from "../../components/OfferingDetailPanels";
 import { OfferingGrid } from "../../components/OfferingGrid";
+import { OfferingIntro } from "../../components/OfferingIntro";
 import { OfferingLinkCard } from "../../components/OfferingLinkCard";
-import { ProductDetailHeader } from "../../components/ProductDetailHeader";
+import { ProductFeatureSections } from "../../components/ProductFeatureSections";
 import { StandardPageContent } from "../../components/StandardPageContent";
 import { productsNav } from "../../data/navigation";
 import { getProductBySlug, products } from "../../data/products";
@@ -39,21 +39,20 @@ export default async function ProductDetailPage({ params }: Props) {
   }
 
   const otherProducts = products.filter((p) => p.slug !== product.slug);
-  const isLoanOrigination = product.slug === "loan-origination";
 
   return (
-    <StandardPageContent
-      contentWidth={isLoanOrigination ? "extra-wide" : "standard"}
-    >
+    <StandardPageContent>
       <OfferingBreadcrumb
         parentHref={productsNav.href}
         parentLabel={productsNav.label}
         currentLabel={product.title}
       />
 
-      <ProductDetailHeader product={product} />
+      <OfferingIntro title={product.title} overview={product.overview} />
 
-      {isLoanOrigination ? <LoanOriginationSection /> : null}
+      {product.sections ? (
+        <ProductFeatureSections sections={product.sections} />
+      ) : null}
 
       <OfferingDetailPanels
         capabilities={product.capabilities}

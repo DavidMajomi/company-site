@@ -2,7 +2,7 @@
   border-color: rgb(255 255 255 / 0.12);
   background-image: linear-gradient(
     to bottom,
-    rgb(14 44 72 / 0.88),
+    rgba(7, 104, 184, 0.88),
     rgb(22 61 98 / 0.74)
   );
 }
