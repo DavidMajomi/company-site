@@ -45,7 +45,7 @@ export function ClientsSection() {
         href={contactNav.href}
         className="mt-8 inline-flex items-center text-sm font-semibold text-(--color-accent) transition hover:text-sky-600"
       >
-        Get in touch →
+        Get in touch
       </Link>
     </section>
   );

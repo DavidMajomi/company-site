@@ -25,7 +25,7 @@ export function OfferingCard({
         className={`${cardShell} px-4 py-3 text-sm font-semibold text-(--color-primary) ${className}`.trim()}
       >
         <span className="transition group-hover:text-(--color-accent)">
-          {title} →
+          {title}
         </span>
       </Link>
     );
@@ -40,7 +40,7 @@ export function OfferingCard({
         <p className="mt-2 text-sm text-(--color-text-muted)">{description}</p>
       ) : null}
       <span className="mt-4 inline-flex items-center text-sm font-semibold text-(--color-accent)">
-        Learn more →
+        Learn more
       </span>
     </Link>
   );

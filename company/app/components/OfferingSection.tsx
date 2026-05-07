@@ -56,7 +56,7 @@ export function OfferingSection({
               href={action.href}
               className={actionClassName(action.tone)}
             >
-              {action.label} →
+              {action.label}
             </Link>
           ))}
         </div>
