@@ -26,6 +26,16 @@ body {
   color: var(--color-text);
 }
 
+a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
 /* Viewport-fixed paint so tall sections do not stretch gradient stops. */
 .hero-gradient {
   background:

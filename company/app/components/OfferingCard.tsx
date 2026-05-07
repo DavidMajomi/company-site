@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const cardShell =
-  "group block h-full rounded-(--radius-md) border border-(--color-border) bg-white shadow-(--shadow-soft) transition hover:border-(--color-accent)/30 hover:shadow-(--shadow-glass)";
+  "group no-underline block h-full rounded-(--radius-md) border border-(--color-border) bg-white shadow-(--shadow-soft) transition hover:border-(--color-accent)/30 hover:shadow-(--shadow-glass)";
 
 type OfferingCardProps = {
   href: string;
