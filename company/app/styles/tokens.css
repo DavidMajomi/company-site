@@ -1,5 +1,12 @@
 @layer base {
   :root {
+    /* Navbar / footer blue glass gradient (semi-transparent stops — pair with `--color-primary` fill). */
+    --gradient-nav-blue: linear-gradient(
+      to bottom,
+      rgba(7, 104, 184, 0.88),
+      rgb(22 61 98 / 0.74)
+    );
+
     --color-primary: #163d62;
     --color-accent: #62d5ff;
     --color-surface: #ffffff;

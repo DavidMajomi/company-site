@@ -68,7 +68,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-(--color-border-light) bg-(--color-primary)">
+    <footer className="border-t border-(--color-border-light) bg-(--color-primary) [background-image:var(--gradient-nav-blue)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 text-sm text-slate-300 sm:flex-row sm:items-start sm:justify-between sm:px-6">
         <div className="space-y-2">
           <p className="text-xs tracking-[0.18em] text-slate-400">
