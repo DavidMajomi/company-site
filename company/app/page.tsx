@@ -26,9 +26,6 @@ export default function Home() {
         <div className="py-24">
           <ServicesHomeSection />
         </div>
-        <div className="py-24">
-          <ClientsSection />
-        </div>
       </div>
       <div className="px-4 pb-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
