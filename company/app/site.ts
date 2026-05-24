@@ -25,7 +25,7 @@ export const site = {
   },
   cta: {
     heading:
-      "Contact us today to discover the technologies you need for achieving excellence.",
+      "Reach out today to see how intelligent solutions can boost revenue, cut operational costs, and improve efficiency",
     subheading:
       "Talk to our team to learn how we can empower your organization with the right technologies and solutions.",
   },
