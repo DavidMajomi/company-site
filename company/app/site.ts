@@ -9,18 +9,16 @@ export const site = {
   /** All-caps label for nav and footer */
   nameDisplay: "VATHEON SYSTEMS",
   tagline: "",
-  heroHeadline:
-    "VATHEON SYSTEMS",
-  heroLead:
-    "We build Automated Solutions for every business need.",
+  heroHeadline: "VATHEON SYSTEMS",
+  heroLead: "We build Automated Solutions for every business need.",
   /** Default meta description (home + fallback) */
   defaultDescription:
-    "Default Meta description",
+    "Vatheon Systems builds asset management, real estate intelligence, underwriting, analytics, and risk monitoring products—and deploys engineers inside your business for automation, integrations, analytics, and advertising execution.",
   pageMeta: {
     services:
-      "IT consulting, project management, outsourcing, training, mobile app development and enterprise application development for organizations that need practical delivery support.",
+      "Forward deployed engineers, custom solution development, custom web development, Google and Meta ads expertise, and real estate services including foreclosure analysis and ad targeting effectiveness.",
     products:
-      "Loan origination, Vatheon Systems Banking Channels, payments fraud prevention, ERP, CRM and cloud migration acceleration—five solution areas we deliver with partners and proven technology.",
+      "Diaspora asset management, retail currency trading, business underwriting pipelines, property security intelligence, nonprofit analytics, risk monitoring, and real estate intelligence platforms with curated alternative data.",
     contact: `Reach ${name} by phone, email, or web. Talk to our team about technologies and solutions for your organization.`,
   },
   cta: {

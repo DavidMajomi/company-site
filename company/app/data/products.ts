@@ -14,42 +14,101 @@ export type Product = Offering & {
 
 export const products: Product[] = [
   {
-    slug: "loan-origination",
-    title: "Loan origination",
+    slug: "diaspora-asset-management",
+    title: "Diaspora Asset Management",
     description:
-      "A configurable lending foundation that helps teams launch and evolve origination journeys without rebuilding the platform every time requirements change.",
+      "Portfolio and asset management software built for diaspora investors who need visibility, control, and reporting across holdings in multiple markets.",
     overview:
-      "Our loan origination capability is built for institutions that need to modernize lending journeys without losing control of the customer lifecycle or operational workflows. It supports retail, SME and corporate lending while keeping the system flexible enough to adapt to new channels, credit policies and servicing rules.",
+      "Diaspora Asset Management helps investors track portfolios, monitor performance, and manage assets across borders from one place. It is designed for individuals and firms that need practical tooling—not another generic wealth app—for real holdings, real currencies, and real compliance expectations.",
     capabilities: [
-      "Customer onboarding and lending workflows with configurable product structures.",
-      "Origination, servicing and lifecycle change support across retail and business lending.",
-      "Integration patterns that connect the platform to digital channels, operations and downstream systems.",
+      "Portfolio tracking and performance reporting across markets and asset classes.",
+      "Holdings, cash flow, and document management in a single operating view.",
+      "Configurable workflows for onboarding, rebalancing, and investor reporting.",
     ],
-    outcomes: [],
+    outcomes: [
+      "Reduce manual spreadsheet work when reconciling cross-border holdings.",
+      "Give stakeholders a clearer picture of exposure, liquidity, and performance.",
+    ],
+  },
+  {
+    slug: "retail-currency-trading",
+    title: "Retail Currency Trading Software",
+    description:
+      "Retail FX trading software with core-banking integrations so institutions can offer currency products without stitching together fragile point solutions.",
+    overview:
+      "Our retail currency trading platform connects customer-facing trading experiences to the core banking and ledger systems that actually move money. Teams get configurable product rules, integration patterns for existing cores, and operational controls suited to regulated retail FX.",
+    capabilities: [
+      "Retail FX order capture, pricing, and settlement workflows.",
+      "Core-banking and ledger integrations via documented API patterns.",
+      "Operational controls for limits, compliance checks, and exception handling.",
+    ],
+    outcomes: [
+      "Launch or extend retail FX without rebuilding integrations for every release.",
+      "Keep trading activity aligned with core-banking records and audit expectations.",
+    ],
+  },
+  {
+    slug: "business-underwriting-pipelines",
+    title: "Underwriting Pipelines for Businesses",
+    description:
+      "Configurable underwriting pipelines that help lenders and insurers evaluate business applicants with clearer data, faster decisions, and less manual rework.",
+    overview:
+      "Business underwriting often breaks down in handoffs—spreadsheet checks, email exceptions, and systems that do not share context. Our pipeline product gives teams a structured path from application intake through decisioning, with room to plug in credit policies, third-party data, and human review where it matters.",
+    capabilities: [
+      "Application intake, document collection, and structured business data capture.",
+      "Rules-driven decisioning with configurable stages, queues, and review paths.",
+      "Integrations for bureau data, financial statements, and downstream servicing systems.",
+    ],
+    outcomes: [
+      "Shorten time-to-decision without sacrificing underwriting quality.",
+      "Make policy changes without rewriting the entire origination stack.",
+    ],
+  },
+  {
+    slug: "real-estate-intelligence",
+    title: "Real Estate Intelligence Platform",
+    description:
+      "A real estate intelligence platform for foreclosure data aggregation, market analysis, and decision support across distressed and opportunity-driven workflows.",
+    overview:
+      "Real estate teams lose time chasing foreclosure records across counties, formats, and update cadences. Our platform aggregates foreclosure and related market signals, normalizes them for analysis, and supports the workflows investors, analysts, and operators use to prioritize opportunities.",
+    capabilities: [
+      "Foreclosure data aggregation, normalization, and change tracking.",
+      "Search, filtering, and map views for market and property-level analysis.",
+      "Exports and API access for downstream models, CRMs, and campaign tools.",
+    ],
+    outcomes: [
+      "Replace manual county-by-county research with a unified intelligence layer.",
+      "Move faster from signal discovery to outreach, underwriting, or acquisition review.",
+    ],
     sections: [
       {
-        eyebrow: "Loan origination",
-        title: "A clearer view of retail, SME and corporate lending flows.",
+        eyebrow: "Foreclosure intelligence",
+        title: "Aggregation and analysis built for acquisition workflows.",
         description:
-          "The diagram shows how channels, an API gateway and the loan origination platform connect to the data hub and compliance controls that support loan origination end to end.",
+          "The platform brings county filings, auction schedules, and property context into one searchable layer so teams can compare markets and act on fresh signals.",
         bullets: [
-          "Channels feed a shared platform instead of isolated point solutions.",
-          "Retail, SME and corporate lending can follow different business rules.",
-          "Security, compliance and integration stay visible across the flow.",
+          "Track new filings, status changes, and auction timelines in one place.",
+          "Compare markets with normalized fields instead of incompatible county exports.",
+          "Feed outreach, underwriting, and portfolio review from the same dataset.",
         ],
       },
-      {
-        eyebrow: "Platform view",
-        title: "Designed for flexibility across products and channels.",
-        description:
-          "A generic product page should still be able to surface the platform context that matters for a complex offering.",
-        bullets: [
-          "Capture different lending journeys without fragmenting the core.",
-          "Keep operations, controls and integrations in one operating model.",
-          "Support growth without reworking the underwriting and servicing path.",
-        ],
-        tone: "subtle",
-      },
+    ],
+  },
+  {
+    slug: "real-estate-alternative-data",
+    title: "Curated Datasets & Alternative Data",
+    description:
+      "Curated real estate datasets and alternative data products for teams building models, dashboards, and market intelligence on top of reliable sources.",
+    overview:
+      "Models and dashboards are only as good as the inputs behind them. We curate real estate datasets and alternative data feeds—foreclosure activity, market signals, and enrichment layers—so analysts and product teams can spend time on insight instead of source wrangling.",
+    capabilities: [
+      "Curated real estate datasets with documented fields, refresh cadence, and lineage.",
+      "Alternative data layers for enrichment, scoring, and market comparison.",
+      "Delivery via API, batch export, and integration-friendly formats.",
+    ],
+    outcomes: [
+      "Reduce time spent cleaning and reconciling inconsistent property data.",
+      "Ship models and dashboards on sources your team can explain to stakeholders.",
     ],
   },
 ];

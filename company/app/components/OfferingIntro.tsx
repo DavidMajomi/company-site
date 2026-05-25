@@ -8,7 +8,7 @@ type OfferingIntroProps = {
 export function OfferingIntro({
   title,
   overview,
-  className = "mt-8 max-w-3xl",
+  className = "mt-8",
   descriptionClassName = "mt-4 text-lg leading-relaxed text-(--color-text-muted)",
 }: OfferingIntroProps) {
   return (

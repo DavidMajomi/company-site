@@ -27,8 +27,13 @@ export function ProductFeatureSections({
     return null;
   }
 
+  const gridClass =
+    sections.length === 1
+      ? "mt-12 grid gap-6"
+      : "mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)]";
+
   return (
-    <section className="mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)]">
+    <section className={gridClass}>
       {sections.map((section, index) => (
         <div
           key={`${index}-${section.title}`}
