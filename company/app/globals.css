@@ -1,13 +1,24 @@
 @import "./styles/tokens.css";
 @import "tailwindcss";
 
+@theme {
+  /* Slightly larger type ramp — text only, not spacing/layout rem units */
+  --text-sm: 0.9375rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.5rem;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  font-size: 120%; /* 24px base — 50% larger site-wide text */
 }
 
 @media (prefers-reduced-motion: reduce) {

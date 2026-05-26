@@ -34,10 +34,10 @@ export function HeroTextBlock({
           width={4229}
           height={300}
           priority
-          className={`h-auto w-full max-w-4xl ${isCentered ? "mx-auto" : ""}`}
+          className={`h-8 w-auto max-w-full sm:h-10 md:h-12 lg:h-auto lg:w-full lg:max-w-4xl ${isCentered ? "mx-auto" : ""}`}
         />
       </h1>
-      <p className="pt-4 text-2xl leading-relaxed text-slate-300">
+      <p className="pt-4 text-lg leading-relaxed text-slate-600 sm:text-xl md:text-2xl">
         {site.heroLead}
       </p>
       <div

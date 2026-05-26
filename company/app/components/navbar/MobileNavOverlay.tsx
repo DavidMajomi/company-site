@@ -41,6 +41,9 @@ export function MobileNavOverlay({
         className="fixed inset-0 z-60 flex flex-col lg:hidden focus:outline-none"
       >
         <Dialog.Title className="sr-only">Site navigation</Dialog.Title>
+        <Dialog.Description className="sr-only">
+          Browse industries and company pages.
+        </Dialog.Description>
         <div className="relative flex min-h-0 flex-1 flex-col px-5 pb-8 pt-[max(1.5rem,env(safe-area-inset-top))] sm:px-8">
           <div
             className={clsx(
