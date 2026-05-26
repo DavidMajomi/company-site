@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { useState } from "react";
 import { primaryNavLinks } from "../../data/navigation";
 import { industries } from "../../data/navigation";
 import { DesktopNav } from "./DesktopNav";
@@ -27,49 +28,24 @@ export type NavbarAppearance = typeof navbarAppearance;
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const panelId = useId();
-
-  useEffect(() => {
-    if (!mobileOpen) {
-      return;
-    }
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setMobileOpen(false);
-      }
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [mobileOpen]);
-
   const navLists = { industries, primaryNavLinks };
 
   return (
-    <header className="sticky top-0 z-10 mx-auto w-full max-w-6xl">
-      <MobileNavBar
-        appearance={navbarAppearance}
-        panelId={panelId}
-        mobileOpen={mobileOpen}
-        onToggleMenu={() => setMobileOpen((o) => !o)}
-      />
+    <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
+      <header className="sticky top-0 z-10 mx-auto w-full max-w-6xl">
+        <MobileNavBar
+          appearance={navbarAppearance}
+          mobileOpen={mobileOpen}
+        />
 
-      <DesktopNav appearance={navbarAppearance} {...navLists} />
+        <DesktopNav appearance={navbarAppearance} {...navLists} />
 
-      <MobileNavOverlay
-        appearance={navbarAppearance}
-        panelId={panelId}
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-        {...navLists}
-      />
-    </header>
+        <MobileNavOverlay
+          appearance={navbarAppearance}
+          onClose={() => setMobileOpen(false)}
+          {...navLists}
+        />
+      </header>
+    </Dialog.Root>
   );
 }

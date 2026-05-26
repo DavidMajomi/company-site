@@ -8,12 +8,12 @@ type SitePageShellProps = {
 
 export function SitePageShell({ children }: SitePageShellProps) {
   return (
-    <main className="flex min-h-screen flex-col bg-(--color-surface)">
+    <div className="flex min-h-screen flex-col bg-(--color-surface)">
       <Navbar />
-      {children}
+      <main>{children}</main>
       <div className="mt-auto">
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }

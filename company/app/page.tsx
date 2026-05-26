@@ -1,4 +1,3 @@
-import { ClientsSection } from "./components/ClientsSection";
 import { CtaSection } from "./components/CtaSection";
 import { HeroCentered } from "./components/HeroCentered";
 import { HomeHashScroller } from "./components/HomeHashScroller";

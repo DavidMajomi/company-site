@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | ${site.tagline}`,
+    default: site.tagline ? `${site.name} | ${site.tagline}` : site.name,
     template: `%s | ${site.name}`,
   },
   description: site.defaultDescription,

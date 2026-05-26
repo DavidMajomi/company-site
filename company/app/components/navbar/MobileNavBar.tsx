@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import * as Dialog from "@radix-ui/react-dialog";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { type NavbarAppearance } from "./Navbar";
@@ -18,16 +19,12 @@ const brandLinkClass =
 
 type Props = {
   appearance: NavbarAppearance;
-  panelId: string;
   mobileOpen: boolean;
-  onToggleMenu: () => void;
 };
 
 export function MobileNavBar({
   appearance,
-  panelId,
   mobileOpen,
-  onToggleMenu,
 }: Props) {
   const circleClass = clsx(circleBtnBase, circleShadowClass, appearance.circle);
   const brandClass = clsx(brandLinkClass, circleShadowClass, appearance.circle);
@@ -48,16 +45,15 @@ export function MobileNavBar({
           priority
         />
       </Link>
-      <button
-        type="button"
-        className={circleClass}
-        aria-expanded={mobileOpen}
-        aria-controls={panelId}
-        aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        onClick={onToggleMenu}
-      >
-        <MenuIcon open={mobileOpen} />
-      </button>
+      <Dialog.Trigger asChild>
+        <button
+          type="button"
+          className={circleClass}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          <MenuIcon open={mobileOpen} />
+        </button>
+      </Dialog.Trigger>
     </div>
   );
 }

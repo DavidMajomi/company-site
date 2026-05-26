@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import Link from "next/link";
+import { Globe, Mail, Phone } from "lucide-react";
 import { footerContactLines } from "../data/footer";
 import { productsNav } from "../data/navigation";
 import { StandardPageContent } from "../components/StandardPageContent";
@@ -11,50 +11,7 @@ export const metadata: Metadata = {
   description: site.pageMeta.contact,
 };
 
-function StrokeContactIcon({ children }: { children: ReactNode }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-6 w-6"
-      aria-hidden
-    >
-      {children}
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <StrokeContactIcon>
-      <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465a2 2 0 0 1 2.62-.284l.865.5a2 2 0 0 1 .922 2.128 2 2 0 0 1-.906 1.257A16 16 0 0 1 8.343 5.438a2 2 0 0 1 1.257-.906 2 2 0 0 1 2.128.922l.5.865a2 2 0 0 1-.284 2.62l-.465.355a1 1 0 0 0-.303 1.213 11 11 0 0 0 5.966 5.966Z" />
-    </StrokeContactIcon>
-  );
-}
-
-function MailIcon() {
-  return (
-    <StrokeContactIcon>
-      <rect width="18" height="14" x="3" y="5" rx="2" />
-      <path d="m3 7 7.89 5.26a2 2 0 0 0 2.22 0L21 7" />
-    </StrokeContactIcon>
-  );
-}
-
-function GlobeIcon() {
-  return (
-    <StrokeContactIcon>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18" />
-      <path d="M12 3a16 16 0 0 1 0 18M12 3a16 16 0 0 0 0 18" />
-    </StrokeContactIcon>
-  );
-}
+const contactIconClass = "h-6 w-6";
 
 function linkKind(href: string): "phone" | "email" | "web" {
   if (href.startsWith("tel:")) return "phone";
@@ -63,9 +20,9 @@ function linkKind(href: string): "phone" | "email" | "web" {
 }
 
 const linkMeta = {
-  phone: { title: "Call us", icon: PhoneIcon },
-  email: { title: "Email", icon: MailIcon },
-  web: { title: "Website", icon: GlobeIcon },
+  phone: { title: "Call us", icon: Phone },
+  email: { title: "Email", icon: Mail },
+  web: { title: "Website", icon: Globe },
 } as const;
 
 export default function ContactPage() {
@@ -111,7 +68,11 @@ export default function ContactPage() {
                       className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition group-hover:bg-sky-100 group-hover:text-sky-700"
                       aria-hidden
                     >
-                      <Icon />
+                      <Icon
+                        className={contactIconClass}
+                        aria-hidden
+                        strokeWidth={1.75}
+                      />
                     </span>
                     <span className="min-w-0">
                       <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 0.0.0.0 --port 5000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -11,8 +11,10 @@
     "knit": "knip --fix --allow-remove-files"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
+    "lucide-react": "^1.16.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
