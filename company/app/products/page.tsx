@@ -14,11 +14,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <StandardPageContent>
-      <OfferingSection
-        title="Our products"
-        description={site.pageMeta.products}
-        variant="page"
-      >
+      <OfferingSection title="Our products" variant="page">
         <OfferingList items={products} hrefPrefix={productsNav.href} />
       </OfferingSection>
     </StandardPageContent>

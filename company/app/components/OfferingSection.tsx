@@ -9,7 +9,7 @@ type OfferingAction = {
 
 type OfferingSectionProps = {
   title: string;
-  description: string;
+  description?: string;
   variant?: "home" | "page";
   id?: string;
   children: ReactNode;
@@ -46,7 +46,9 @@ export function OfferingSection({
           {title}
         </h2>
       )}
-      <p className="mt-3 text-(--color-text-muted)">{description}</p>
+      {description ? (
+        <p className="mt-3 text-(--color-text-muted)">{description}</p>
+      ) : null}
       {children}
       {!isPage && actions.length > 0 ? (
         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">

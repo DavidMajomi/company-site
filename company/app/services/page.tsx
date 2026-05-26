@@ -14,11 +14,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <StandardPageContent>
-      <OfferingSection
-        title="Our services"
-        description={site.pageMeta.services}
-        variant="page"
-      >
+      <OfferingSection title="Our services" variant="page">
         <OfferingList items={services} hrefPrefix={servicesNav.href} />
       </OfferingSection>
     </StandardPageContent>
