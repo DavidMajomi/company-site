@@ -75,7 +75,7 @@ export function Footer() {
             {site.nameDisplay}
           </p>
           <p className="max-w-md text-xs text-slate-300 sm:text-sm">
-            {site.heroHeadline}
+            {site.heroLead}
           </p>
         </div>
 
