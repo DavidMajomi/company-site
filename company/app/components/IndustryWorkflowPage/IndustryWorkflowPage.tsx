@@ -36,7 +36,7 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
   return (
     <StandardPageContent
       contentWidth="wide"
-      className="grid gap-6 max-lg:gap-4"
+      className="grid gap-20 max-lg:gap-8"
     >
       <IndustryWorkflowHero
         label={industry.label}
