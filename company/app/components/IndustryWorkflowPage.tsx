@@ -15,6 +15,8 @@ import type { Offering } from "../data/offerings";
 import type { IndustryPage } from "../data/industries";
 import { contactNav, productsNav, servicesNav } from "../data/navigation";
 import { Button } from "../shared/Button";
+import { OfferingGrid } from "./OfferingGrid";
+import { OfferingLinkCard } from "./OfferingLinkCard";
 import { StandardPageContent } from "./StandardPageContent";
 import styles from "./IndustryWorkflowPage.module.css";
 
@@ -28,7 +30,6 @@ const proofIcons = [Map, Route, BarChart3];
 type RelevantOffering = {
   offering: Offering;
   hrefPrefix: string;
-  kind: "Product" | "Service";
 };
 
 function findOfferings(slugs: string[], source: Offering[]) {
@@ -44,12 +45,10 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
     ...productOfferings.map((offering) => ({
       offering,
       hrefPrefix: productsNav.href,
-      kind: "Product" as const,
     })),
     ...serviceOfferings.map((offering) => ({
       offering,
       hrefPrefix: servicesNav.href,
-      kind: "Service" as const,
     })),
   ];
 
@@ -127,14 +126,15 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
           </h2>
         </div>
 
-        <div className={styles.offeringsGrid}>
-          {relevantOfferings.map(({ offering, hrefPrefix, kind }) => (
-            <a key={offering.slug} href={`${hrefPrefix}/${offering.slug}`}>
-              <span>{kind}</span>
-              <h3>{offering.title}</h3>
-              <p>{offering.description}</p>
-            </a>
-          ))}
+        <div className={styles.offeringsGridWrap}>
+          <OfferingGrid
+            items={relevantOfferings}
+            getKey={({ offering }) => offering.slug}
+            renderCard={({ offering, hrefPrefix }) => (
+              <OfferingLinkCard offering={offering} hrefPrefix={hrefPrefix} />
+            )}
+            className="flex flex-wrap justify-center gap-6"
+          />
         </div>
       </section>
 

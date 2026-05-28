@@ -97,7 +97,6 @@
 
 .steps,
 .problemGrid,
-.offeringsGrid,
 .outcomeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
@@ -107,7 +106,6 @@
 
 .steps article,
 .problemGrid article,
-.offeringsGrid a,
 .outcomeGrid article {
   background: var(--industry-panel);
 }
@@ -130,8 +128,7 @@
   font-weight: 950;
 }
 
-.steps h3,
-.offeringsGrid h3 {
+.steps h3 {
   margin: 0;
   color: var(--industry-text);
   font-size: 1.08rem;
@@ -139,7 +136,6 @@
 
 .steps p,
 .problemGrid p,
-.offeringsGrid p,
 .outcomeGrid p {
   margin: 0.75rem 0 0;
   color: var(--industry-muted);
@@ -169,37 +165,8 @@
   font-weight: 750;
 }
 
-.offeringsGrid {
-  margin: 0;
-}
-
-.offeringsGrid a {
-  display: block;
-  min-height: 14rem;
-  padding: 1.25rem;
-  color: inherit;
-  text-decoration: none;
-  transition:
-    background 180ms ease,
-    transform 180ms ease;
-}
-
-.offeringsGrid a:hover {
-  background: var(--industry-panel-accent);
-  transform: translateY(-2px);
-}
-
-.offeringsGrid span {
-  display: inline-flex;
-  margin-bottom: 2.25rem;
-  border: 1px solid rgb(2 124 238 / 0.18);
-  border-radius: 999px;
-  padding: 0.35rem 0.55rem;
-  color: var(--industry-accent);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.offeringsGridWrap {
+  padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
 }
 
 .outcomesSection {
@@ -258,10 +225,6 @@
   .stepHead {
     margin-bottom: 1.5rem;
   }
-
-  .offeringsGrid span {
-    margin-bottom: 1.15rem;
-  }
 }
 
 @media (width <= 39.99rem) {
@@ -279,9 +242,13 @@
     padding: 1rem;
   }
 
+  .offeringsGridWrap {
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .steps article,
   .problemGrid article,
-  .offeringsGrid a,
   .outcomeGrid article {
     min-height: auto;
     padding: 1rem;
