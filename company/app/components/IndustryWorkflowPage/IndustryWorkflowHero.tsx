@@ -1,5 +1,6 @@
 import { contactNav } from "../../data/navigation";
 import { Button } from "../../shared/Button";
+import { Eyebrow } from "../../shared/Eyebrow";
 
 type IndustryWorkflowHeroProps = {
   label: string;
@@ -18,16 +19,14 @@ export function IndustryWorkflowHero({
       aria-labelledby="industry-heading"
     >
       <div>
-        <p className="m-0 text-[0.72rem] font-black uppercase tracking-[0.22em] text-(--color-accent)">
-          Industry focus / {label}
-        </p>
+        <Eyebrow text={`Industry focus / ${label}`} />
         <h1
           id="industry-heading"
-          className="mt-[0.9rem] mb-0 font-serif text-[clamp(2.55rem,6.2vw,4rem)] font-medium leading-[0.98] tracking-normal text-(--color-text) max-sm:leading-[1.06]"
+          className="mt-[0.9rem] mb-0 font-serif text-fluid-display font-medium leading-[0.98] tracking-normal text-(--color-text) max-sm:leading-[1.06]"
         >
           {headline}
         </h1>
-        <p className="mt-5 block text-[1.06rem] leading-[1.75] text-(--color-text-muted) max-sm:text-[0.98rem] max-sm:leading-[1.62]">
+        <p className="mt-5 block text-lead leading-[1.75] text-(--color-text-muted) max-sm:text-lead-sm max-sm:leading-[1.62]">
           {overview}
         </p>
         <div className="mt-8 flex flex-wrap gap-[0.8rem] max-[55.99rem]:flex-col max-[55.99rem]:items-stretch [&_a]:max-[55.99rem]:w-full [&_a]:max-[55.99rem]:justify-center">

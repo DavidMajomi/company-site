@@ -87,7 +87,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-(--color-border-light)">
-        <div className="mx-auto max-w-6xl px-4 py-4 text-center text-[11px] text-slate-400 sm:px-6">
+        <div className="mx-auto max-w-6xl px-4 py-4 text-center text-micro text-slate-400 sm:px-6">
           © {new Date().getFullYear()} {site.name}. {site.copyrightSuffix}
         </div>
       </div>
