@@ -8,7 +8,6 @@ import { IndustryWorkflowHero } from "./IndustryWorkflowHero";
 import { IndustryWorkflowOfferingsSection } from "./IndustryWorkflowOfferingsSection";
 import { IndustryWorkflowOutcomesSection } from "./IndustryWorkflowOutcomesSection";
 import { IndustryWorkflowProblemSection } from "./IndustryWorkflowProblemSection";
-import styles from "./IndustryWorkflowPage.module.css";
 
 type IndustryWorkflowPageProps = {
   industry: IndustryPage;
@@ -35,7 +34,10 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
   ];
 
   return (
-    <StandardPageContent contentWidth="wide" className={styles.shell}>
+    <StandardPageContent
+      contentWidth="wide"
+      className="grid gap-6 max-lg:gap-4"
+    >
       <IndustryWorkflowHero
         label={industry.label}
         headline={industry.headline}
