@@ -1,0 +1,299 @@
+.shell {
+  --industry-accent: var(--color-accent);
+  --industry-text: var(--color-text);
+  --industry-muted: var(--color-text-muted);
+  --industry-border: rgb(15 23 42 / 0.1);
+  --industry-panel: #fbfcfd;
+  --industry-panel-accent: #eef6ff;
+  --industry-dark: #07131f;
+  --industry-sky: #38bdf8;
+  --industry-step-muted: #94a3b8;
+
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero,
+.workflowSection,
+.problemSection,
+.offeringsSection,
+.outcomesSection {
+  overflow: hidden;
+  border: 1px solid var(--industry-border);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.88);
+}
+
+.hero {
+  display: block;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  background:
+    radial-gradient(circle at 88% 12%, rgb(15 23 42 / 0.08), transparent 28rem),
+    linear-gradient(135deg, #fbfcfd 0%, #f4f6f8 100%);
+}
+
+.hero .eyebrow {
+  color: var(--industry-text);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--industry-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.sectionHeader h2,
+.problemIntro h2,
+.outcomesSection h2 {
+  margin: 0.9rem 0 0;
+  color: var(--industry-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.hero h1 {
+  font-size: clamp(2.55rem, 6.2vw, 4rem);
+}
+
+.heroCopy > p:not(.eyebrow),
+.sectionHeader > span {
+  display: block;
+  margin-top: 1.25rem;
+  color: var(--industry-muted);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.stepHead svg,
+.problemGrid svg,
+.outcomeGrid svg {
+  color: var(--industry-accent);
+}
+
+.sectionHeader,
+.problemSection,
+.outcomesSection {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.sectionHeader h2,
+.problemIntro h2,
+.outcomesSection h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.steps,
+.problemGrid,
+.offeringsGrid,
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1px;
+  background: var(--industry-border);
+}
+
+.steps article,
+.problemGrid article,
+.offeringsGrid a,
+.outcomeGrid article {
+  background: var(--industry-panel);
+}
+
+.steps article {
+  padding: 1.25rem;
+  min-height: 14rem;
+}
+
+.stepHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.75rem;
+}
+
+.stepHead span {
+  color: var(--industry-step-muted);
+  font-size: 0.8rem;
+  font-weight: 950;
+}
+
+.steps h3,
+.offeringsGrid h3 {
+  margin: 0;
+  color: var(--industry-text);
+  font-size: 1.08rem;
+}
+
+.steps p,
+.problemGrid p,
+.offeringsGrid p,
+.outcomeGrid p {
+  margin: 0.75rem 0 0;
+  color: var(--industry-muted);
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
+.problemSection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.problemGrid {
+  background: transparent;
+  gap: 0.75rem;
+}
+
+.problemGrid article {
+  min-height: 10rem;
+  border: 1px solid var(--industry-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.problemGrid p {
+  color: var(--industry-text);
+  font-weight: 750;
+}
+
+.offeringsGrid {
+  margin: 0;
+}
+
+.offeringsGrid a {
+  display: block;
+  min-height: 14rem;
+  padding: 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.offeringsGrid a:hover {
+  background: var(--industry-panel-accent);
+  transform: translateY(-2px);
+}
+
+.offeringsGrid span {
+  display: inline-flex;
+  margin-bottom: 2.25rem;
+  border: 1px solid rgb(2 124 238 / 0.18);
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem;
+  color: var(--industry-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.outcomesSection {
+  display: grid;
+  gap: 1.5rem;
+  background: var(--industry-dark);
+}
+
+.outcomesSection .eyebrow,
+.outcomeGrid svg {
+  color: var(--industry-sky);
+}
+
+.outcomesSection h2 {
+  color: white;
+}
+
+.outcomeGrid {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.outcomeGrid article {
+  min-height: 12rem;
+  padding: 1.25rem;
+  background: var(--industry-dark);
+}
+
+.outcomeGrid p {
+  color: rgb(226 232 240 / 0.82);
+  font-weight: 650;
+}
+
+@media (width >= 56rem) {
+  .problemSection,
+  .outcomesSection {
+    grid-template-columns: 0.7fr 1.3fr;
+    align-items: start;
+  }
+}
+
+@media (width <= 55.99rem) {
+  .shell {
+    gap: 1rem;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroActions a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .stepHead {
+    margin-bottom: 1.5rem;
+  }
+
+  .offeringsGrid span {
+    margin-bottom: 1.15rem;
+  }
+}
+
+@media (width <= 39.99rem) {
+  .hero,
+  .workflowSection,
+  .problemSection,
+  .offeringsSection,
+  .outcomesSection {
+    border-radius: 6px;
+  }
+
+  .sectionHeader,
+  .problemSection,
+  .outcomesSection {
+    padding: 1rem;
+  }
+
+  .steps article,
+  .problemGrid article,
+  .offeringsGrid a,
+  .outcomeGrid article {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    line-height: 1.06;
+  }
+
+  .heroCopy > p:not(.eyebrow),
+  .sectionHeader > span {
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+}

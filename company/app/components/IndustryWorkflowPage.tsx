@@ -1,0 +1,164 @@
+import {
+  ArrowRight,
+  BarChart3,
+  Database,
+  FileCheck2,
+  Filter,
+  Map,
+  RadioTower,
+  Route,
+  Target,
+} from "lucide-react";
+import { products } from "../data/products";
+import { services } from "../data/services";
+import type { Offering } from "../data/offerings";
+import type { IndustryPage } from "../data/industries";
+import { contactNav, productsNav, servicesNav } from "../data/navigation";
+import { Button } from "../shared/Button";
+import { StandardPageContent } from "./StandardPageContent";
+import styles from "./IndustryWorkflowPage.module.css";
+
+type IndustryWorkflowPageProps = {
+  industry: IndustryPage;
+};
+
+const stepIcons = [Database, Filter, Target, RadioTower];
+const proofIcons = [Map, Route, BarChart3];
+
+type RelevantOffering = {
+  offering: Offering;
+  hrefPrefix: string;
+  kind: "Product" | "Service";
+};
+
+function findOfferings(slugs: string[], source: Offering[]) {
+  return slugs
+    .map((slug) => source.find((item) => item.slug === slug))
+    .filter((item): item is Offering => Boolean(item));
+}
+
+export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
+  const productOfferings = findOfferings(industry.productSlugs, products);
+  const serviceOfferings = findOfferings(industry.serviceSlugs, services);
+  const relevantOfferings: RelevantOffering[] = [
+    ...productOfferings.map((offering) => ({
+      offering,
+      hrefPrefix: productsNav.href,
+      kind: "Product" as const,
+    })),
+    ...serviceOfferings.map((offering) => ({
+      offering,
+      hrefPrefix: servicesNav.href,
+      kind: "Service" as const,
+    })),
+  ];
+
+  return (
+    <StandardPageContent contentWidth="wide" className={styles.shell}>
+      <section className={styles.hero} aria-labelledby="industry-heading">
+        <div className={styles.heroCopy}>
+          <p className={styles.eyebrow}>Industry focus / {industry.label}</p>
+          <h1 id="industry-heading">{industry.headline}</h1>
+          <p>{industry.overview}</p>
+          <div className={styles.heroActions}>
+            <Button href={contactNav.href}>Talk to us</Button>
+            <Button href="#workflow" variant="outline">
+              View workflow
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className={styles.workflowSection}
+        id="workflow"
+        aria-labelledby="workflow-heading"
+      >
+        <div className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>Workflow map</p>
+          <h2 id="workflow-heading">{industry.workflowTitle}</h2>
+          <span>{industry.workflowIntro}</span>
+        </div>
+
+        <div className={styles.steps}>
+          {industry.workflow.map((step, index) => {
+            const Icon = stepIcons[index] ?? FileCheck2;
+
+            return (
+              <article key={step.title}>
+                <div className={styles.stepHead}>
+                  <Icon aria-hidden />
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section
+        className={styles.problemSection}
+        aria-labelledby="problem-heading"
+      >
+        <div className={styles.problemIntro}>
+          <p className={styles.eyebrow}>Why teams call us</p>
+          <h2 id="problem-heading">{industry.painPointsTitle}</h2>
+        </div>
+        <div className={styles.problemGrid}>
+          {industry.painPoints.map((point) => (
+            <article key={point}>
+              <ArrowRight aria-hidden />
+              <p>{point}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className={styles.offeringsSection}
+        aria-labelledby="offerings-heading"
+      >
+        <div className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>Relevant offerings</p>
+          <h2 id="offerings-heading">
+            Products and services for {industry.label.toLowerCase()} teams.
+          </h2>
+        </div>
+
+        <div className={styles.offeringsGrid}>
+          {relevantOfferings.map(({ offering, hrefPrefix, kind }) => (
+            <a key={offering.slug} href={`${hrefPrefix}/${offering.slug}`}>
+              <span>{kind}</span>
+              <h3>{offering.title}</h3>
+              <p>{offering.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className={styles.outcomesSection}
+        aria-labelledby="outcomes-heading"
+      >
+        <div>
+          <p className={styles.eyebrow}>Expected outcomes</p>
+          <h2 id="outcomes-heading">{industry.outcomesTitle}</h2>
+        </div>
+        <div className={styles.outcomeGrid}>
+          {industry.outcomes.map((outcome, index) => {
+            const Icon = proofIcons[index] ?? FileCheck2;
+
+            return (
+              <article key={outcome}>
+                <Icon aria-hidden />
+                <p>{outcome}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    </StandardPageContent>
+  );
+}

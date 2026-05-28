@@ -2,8 +2,7 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
-import { primaryNavLinks } from "../../data/navigation";
-import { industries } from "../../data/navigation";
+import { industries, primaryNavLinks } from "../../data/navigation";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNavBar } from "./MobileNavBar";
 import { MobileNavOverlay } from "./MobileNavOverlay";
@@ -11,7 +10,7 @@ import navbarStyles from "./navbar.module.css";
 import sharedStyles from "./navbar-shared.module.css";
 
 /** Single navbar chrome everywhere — no hero scroll observe / class swapping. */
-export const navbarAppearance = {
+const navbarAppearance = {
   nav: navbarStyles.nav,
   link: navbarStyles.link,
   brand: sharedStyles.brandContent,

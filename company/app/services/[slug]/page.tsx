@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { OfferingBreadcrumb } from "../../components/OfferingBreadcrumb";
 import { OfferingDetailPanels } from "../../components/OfferingDetailPanels";
-import { OfferingGrid } from "../../components/OfferingGrid";
 import { OfferingIntro } from "../../components/OfferingIntro";
-import { OfferingLinkCard } from "../../components/OfferingLinkCard";
+import { RelatedOfferingsSection } from "../../components/RelatedOfferingsSection";
 import { StandardPageContent } from "../../components/StandardPageContent";
 import { servicesNav } from "../../data/navigation";
 import { getServiceBySlug, services } from "../../data/services";
@@ -54,29 +53,12 @@ export default async function ServiceDetailPage({ params }: Props) {
         outcomes={service.outcomes}
       />
 
-      {otherServices.length > 0 ? (
-        <section className="mt-14" aria-labelledby="related-services-heading">
-          <h2
-            id="related-services-heading"
-            className="text-lg font-semibold text-(--color-primary)"
-          >
-            Other services
-          </h2>
-          <OfferingGrid
-            items={otherServices}
-            getKey={(item) => item.slug}
-            renderCard={(item) => (
-              <OfferingLinkCard
-                offering={item}
-                hrefPrefix={servicesNav.href}
-                variant="compact"
-              />
-            )}
-            className="mt-4 flex flex-wrap justify-center gap-3"
-            itemClassName="w-full shrink-0 sm:w-[calc((100%-0.75rem)/2)] lg:w-[calc((100%-1.5rem)/3)]"
-          />
-        </section>
-      ) : null}
+      <RelatedOfferingsSection
+        heading="Other services"
+        headingId="related-services-heading"
+        hrefPrefix={servicesNav.href}
+        offerings={otherServices}
+      />
     </StandardPageContent>
   );
 }

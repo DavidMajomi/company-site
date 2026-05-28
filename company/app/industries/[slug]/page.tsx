@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { IndustryPlaceholderPage } from "../../components/IndustryPlaceholderPage";
+import { IndustryWorkflowPage } from "../../components/IndustryWorkflowPage";
 import {
   getIndustryBySlug,
   getIndustryStaticParams,
@@ -36,5 +36,5 @@ export default async function IndustryPage({ params }: Props) {
     notFound();
   }
 
-  return <IndustryPlaceholderPage industry={industry} />;
+  return <IndustryWorkflowPage industry={industry} />;
 }
