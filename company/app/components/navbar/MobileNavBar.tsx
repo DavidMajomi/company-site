@@ -14,8 +14,6 @@ const circleShadowClass =
 
 const circleBtnBase =
   "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
-const brandLinkClass =
-  "inline-flex h-12 items-center rounded-full border px-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
 
 type Props = {
   appearance: NavbarAppearance;
@@ -27,13 +25,12 @@ export function MobileNavBar({
   mobileOpen,
 }: Props) {
   const circleClass = clsx(circleBtnBase, circleShadowClass, appearance.circle);
-  const brandClass = clsx(brandLinkClass, circleShadowClass, appearance.circle);
 
   return (
     <div className={mobileBarClass}>
       <NavbarBrandLink
         ariaLabel={`${NAV_BRAND_NAME} home`}
-        className={brandClass}
+        className={circleClass}
       >
         <Image
           src="/vatheon-v-mark.svg"
