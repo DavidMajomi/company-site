@@ -10,10 +10,10 @@ export const site = {
   nameDisplay: "VATHEON SYSTEMS",
   tagline: "",
   heroHeadline: "VATHEON SYSTEMS",
-  heroLead: "Building Intelligent Automated Solutions for Every Business Need",
+  heroLead: "Building Intelligent Automated Systems for Every Business Need",
   /** Default meta description (home + fallback) */
   defaultDescription:
-    "Vatheon Systems builds asset management, real estate intelligence, underwriting, analytics, and risk monitoring products—and deploys engineers inside your business for automation, integrations, analytics, and advertising execution.",
+    "Vatheon Systems builds Intlellgient Automated Systems from asset management, real estate intelligence, underwriting, analytics, and risk monitoring products—and deploys engineers inside your business for automation, integrations, analytics, and advertising execution.",
   pageMeta: {
     services:
       "Forward deployed engineers, custom solution development, custom web development, Google and Meta ads expertise, and real estate services including foreclosure analysis and ad targeting effectiveness.",
