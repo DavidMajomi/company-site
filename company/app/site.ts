@@ -10,7 +10,7 @@ export const site = {
   nameDisplay: "VATHEON SYSTEMS",
   tagline: "",
   heroHeadline: "VATHEON SYSTEMS",
-  heroLead: "We build Automated Solutions for every business need.",
+  heroLead: "Building Automated Intellignt Solutions for Every Business Need",
   /** Default meta description (home + fallback) */
   defaultDescription:
     "Vatheon Systems builds asset management, real estate intelligence, underwriting, analytics, and risk monitoring products—and deploys engineers inside your business for automation, integrations, analytics, and advertising execution.",
