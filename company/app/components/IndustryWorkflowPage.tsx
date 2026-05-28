@@ -1,14 +1,4 @@
-import {
-  ArrowRight,
-  BarChart3,
-  Database,
-  FileCheck2,
-  Filter,
-  Map,
-  RadioTower,
-  Route,
-  Target,
-} from "lucide-react";
+import { ArrowRight, BarChart3, FileCheck2, Map, Route } from "lucide-react";
 import { products } from "../data/products";
 import { services } from "../data/services";
 import type { Offering } from "../data/offerings";
@@ -24,7 +14,6 @@ type IndustryWorkflowPageProps = {
   industry: IndustryPage;
 };
 
-const stepIcons = [Database, Filter, Target, RadioTower];
 const proofIcons = [Map, Route, BarChart3];
 
 type RelevantOffering = {
@@ -61,39 +50,7 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
           <p>{industry.overview}</p>
           <div className={styles.heroActions}>
             <Button href={contactNav.href}>Talk to us</Button>
-            <Button href="#workflow" variant="outline">
-              View workflow
-            </Button>
           </div>
-        </div>
-      </section>
-
-      <section
-        className={styles.workflowSection}
-        id="workflow"
-        aria-labelledby="workflow-heading"
-      >
-        <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>Workflow map</p>
-          <h2 id="workflow-heading">{industry.workflowTitle}</h2>
-          <span>{industry.workflowIntro}</span>
-        </div>
-
-        <div className={styles.steps}>
-          {industry.workflow.map((step, index) => {
-            const Icon = stepIcons[index] ?? FileCheck2;
-
-            return (
-              <article key={step.title}>
-                <div className={styles.stepHead}>
-                  <Icon aria-hidden />
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </article>
-            );
-          })}
         </div>
       </section>
 

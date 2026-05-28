@@ -7,14 +7,11 @@
   --industry-panel-accent: #eef6ff;
   --industry-dark: #07131f;
   --industry-sky: #38bdf8;
-  --industry-step-muted: #94a3b8;
-
   display: grid;
   gap: 1.5rem;
 }
 
 .hero,
-.workflowSection,
 .problemSection,
 .offeringsSection {
   overflow: hidden;
@@ -76,7 +73,6 @@
   margin-top: 2rem;
 }
 
-.stepHead svg,
 .problemGrid svg,
 .outcomeGrid svg {
   color: var(--industry-accent);
@@ -94,7 +90,6 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
-.steps,
 .problemGrid,
 .outcomeGrid {
   display: grid;
@@ -103,37 +98,11 @@
   background: var(--industry-border);
 }
 
-.steps article,
 .problemGrid article,
 .outcomeGrid article {
   background: var(--industry-panel);
 }
 
-.steps article {
-  padding: 1.25rem;
-  min-height: 14rem;
-}
-
-.stepHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2.75rem;
-}
-
-.stepHead span {
-  color: var(--industry-step-muted);
-  font-size: 0.8rem;
-  font-weight: 950;
-}
-
-.steps h3 {
-  margin: 0;
-  color: var(--industry-text);
-  font-size: 1.08rem;
-}
-
-.steps p,
 .problemGrid p,
 .outcomeGrid p {
   margin: 0.75rem 0 0;
@@ -215,14 +184,10 @@
     width: 100%;
   }
 
-  .stepHead {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (width <= 39.99rem) {
   .hero,
-  .workflowSection,
   .problemSection,
   .offeringsSection {
     border-radius: 6px;
@@ -239,7 +204,6 @@
     padding-bottom: 1rem;
   }
 
-  .steps article,
   .problemGrid article,
   .outcomeGrid article {
     min-height: auto;

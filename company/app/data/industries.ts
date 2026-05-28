@@ -7,12 +7,6 @@ export type IndustryPage = IndustryLink & {
   slug: string;
   overview: string;
   headline: string;
-  workflowTitle: string;
-  workflowIntro: string;
-  workflow: {
-    title: string;
-    body: string;
-  }[];
   painPointsTitle: string;
   painPoints: string[];
   outcomesTitle: string;
@@ -26,30 +20,9 @@ const industryPages: IndustryPage[] = [
     slug: "real-estate",
     href: "/industries/real-estate",
     label: "Real Estate",
-    headline: "One operating map from property signal to market action.",
+    headline: "From property signal to market action.",
     overview:
       "Foreclosure intelligence, curated property datasets, acquisition-focused analytics, and campaign measurement for teams working distressed and opportunity-driven real estate markets.",
-    workflowTitle: "From scattered records to acquisition decisions.",
-    workflowIntro:
-      "Vatheon connects the messy parts of real estate intelligence so teams can move from public records to outreach, underwriting, and reporting without rebuilding the same data process every week.",
-    workflow: [
-      {
-        title: "Source",
-        body: "Collect foreclosure filings, auction schedules, property context, and market signals from fragmented sources.",
-      },
-      {
-        title: "Normalize",
-        body: "Standardize fields, refresh cadence, lineage, and enrichment layers so analysts can compare markets cleanly.",
-      },
-      {
-        title: "Prioritize",
-        body: "Filter and score properties for acquisition review, investor reporting, outreach, or model input.",
-      },
-      {
-        title: "Activate",
-        body: "Push signals into CRMs, campaign tools, dashboards, exports, and downstream underwriting workflows.",
-      },
-    ],
     painPointsTitle:
       "The page should meet prospects inside the work they already recognize.",
     painPoints: [
@@ -74,27 +47,6 @@ const industryPages: IndustryPage[] = [
     headline: "Structured financial workflows without fragile handoffs.",
     overview:
       "Asset management, retail currency trading with core-banking integrations, business underwriting pipelines, and risk monitoring with practical baseline compliance.",
-    workflowTitle: "From application, order, or holding to controlled operations.",
-    workflowIntro:
-      "Vatheon helps finance teams connect customer-facing products to the data, decisioning, ledgers, and reporting that regulated operations depend on.",
-    workflow: [
-      {
-        title: "Capture",
-        body: "Bring applications, orders, holdings, documents, and customer activity into structured workflows.",
-      },
-      {
-        title: "Integrate",
-        body: "Connect core banking, ledger, bureau, financial statement, and downstream servicing systems.",
-      },
-      {
-        title: "Decide",
-        body: "Apply configurable policies, limits, compliance checks, exception queues, and human review paths.",
-      },
-      {
-        title: "Report",
-        body: "Give operators, stakeholders, and auditors clearer views of status, exposure, performance, and exceptions.",
-      },
-    ],
     painPointsTitle:
       "The page should meet prospects inside the work they already recognize.",
     painPoints: [
@@ -123,27 +75,6 @@ const industryPages: IndustryPage[] = [
     headline: "Senior execution across automation, web, ads, and reporting.",
     overview:
       "Forward deployed engineers, AI automation, CRM and advertising integrations, and hands-on Google and Meta ads support for operators who need senior execution without enterprise overhead.",
-    workflowTitle: "From operational friction to measurable growth systems.",
-    workflowIntro:
-      "Vatheon helps small teams tighten the path from campaign spend and web traffic to lead routing, CRM follow-up, reporting, and internal automation.",
-    workflow: [
-      {
-        title: "Diagnose",
-        body: "Map the workflow, data gaps, ad setup, landing paths, CRM handoffs, and reporting needs.",
-      },
-      {
-        title: "Connect",
-        body: "Wire together websites, CRM, Google Ads, Meta Ads, forms, APIs, and internal business tools.",
-      },
-      {
-        title: "Automate",
-        body: "Remove repetitive admin work with AI automation, dashboards, lead routing, and operator-friendly tools.",
-      },
-      {
-        title: "Optimize",
-        body: "Use conversion tracking and business reporting to decide what to improve, pause, or scale next.",
-      },
-    ],
     painPointsTitle:
       "The page should meet prospects inside the work they already recognize.",
     painPoints: [
