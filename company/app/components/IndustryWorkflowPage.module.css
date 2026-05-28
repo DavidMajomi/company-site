@@ -28,10 +28,6 @@
     linear-gradient(135deg, #fbfcfd 0%, #f4f6f8 100%);
 }
 
-.hero .eyebrow {
-  color: var(--industry-text);
-}
-
 .eyebrow {
   margin: 0;
   color: var(--industry-accent);
