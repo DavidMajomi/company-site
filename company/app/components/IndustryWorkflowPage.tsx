@@ -139,7 +139,7 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
       </section>
 
       <section
-        className={styles.outcomesSection}
+        className={`${styles.outcomesSection} cta-card`}
         aria-labelledby="outcomes-heading"
       >
         <div>

@@ -16,8 +16,7 @@
 .hero,
 .workflowSection,
 .problemSection,
-.offeringsSection,
-.outcomesSection {
+.offeringsSection {
   overflow: hidden;
   border: 1px solid var(--industry-border);
   border-radius: 8px;
@@ -172,31 +171,25 @@
 .outcomesSection {
   display: grid;
   gap: 1.5rem;
-  background: var(--industry-dark);
-}
-
-.outcomesSection .eyebrow,
-.outcomeGrid svg {
-  color: var(--industry-sky);
-}
-
-.outcomesSection h2 {
-  color: white;
+  overflow: hidden;
 }
 
 .outcomeGrid {
-  background: rgb(255 255 255 / 0.12);
+  background: transparent;
+  gap: 0.75rem;
 }
 
 .outcomeGrid article {
   min-height: 12rem;
+  border: 1px solid var(--industry-border);
+  border-radius: 8px;
   padding: 1.25rem;
-  background: var(--industry-dark);
+  background: var(--industry-panel);
 }
 
 .outcomeGrid p {
-  color: rgb(226 232 240 / 0.82);
-  font-weight: 650;
+  color: var(--industry-text);
+  font-weight: 750;
 }
 
 @media (width >= 56rem) {
@@ -231,8 +224,7 @@
   .hero,
   .workflowSection,
   .problemSection,
-  .offeringsSection,
-  .outcomesSection {
+  .offeringsSection {
     border-radius: 6px;
   }
 
