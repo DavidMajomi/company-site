@@ -4,6 +4,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { type NavbarAppearance } from "./Navbar";
+import { NavbarBrandLink } from "./NavbarBrandLink";
 import { CloseIcon } from "./NavbarIcons";
 import {
   OverlayNavLinkItems,
@@ -51,8 +52,8 @@ export function MobileNavOverlay({
               appearance.overlayBorder,
             )}
           >
-            <Link
-              href="/"
+            <NavbarBrandLink
+              ariaLabel={NAV_BRAND_NAME}
               className={clsx(
                 baseBrandClass,
                 appearance.overlayHeading,
@@ -67,7 +68,7 @@ export function MobileNavOverlay({
                 height={44}
                 className="h-7 w-7"
               />
-            </Link>
+            </NavbarBrandLink>
             <Dialog.Close asChild>
               <button
                 type="button"

@@ -3,10 +3,7 @@ type NavLink = {
   label: string;
 };
 
-const homeNav: NavLink = {
-  href: "/#hero",
-  label: "Home",
-};
+export const heroHref = "/#hero";
 
 export const productsNav: NavLink = {
   href: "/products",
@@ -24,7 +21,6 @@ export const contactNav: NavLink = {
 };
 
 export const primaryNavLinks: NavLink[] = [
-  homeNav,
   productsNav,
   servicesNav,
   contactNav,

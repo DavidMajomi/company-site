@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { clsx } from "clsx";
 import { type NavbarAppearance } from "./Navbar";
 import { NAV_BRAND_NAME } from "./navbar-constants";
+import { NavbarBrandLink } from "./NavbarBrandLink";
 import { DesktopNavListItems, type NavItem } from "./NavLinkLists";
 
 const desktopNavClass =
@@ -46,9 +46,8 @@ export function DesktopNav({ appearance, industries, primaryNavLinks }: Props) {
 
 function DesktopNavbarBrand({ brandClassName }: { brandClassName: string }) {
   return (
-    <Link
-      href="/"
-      aria-label={NAV_BRAND_NAME}
+    <NavbarBrandLink
+      ariaLabel={NAV_BRAND_NAME}
       className={clsx(baseBrandClass, brandClassName, "justify-self-start")}
     >
       <Image
@@ -59,6 +58,6 @@ function DesktopNavbarBrand({ brandClassName }: { brandClassName: string }) {
         className="h-6 w-auto"
         priority
       />
-    </Link>
+    </NavbarBrandLink>
   );
 }

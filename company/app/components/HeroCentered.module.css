@@ -1,7 +1,7 @@
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: translateY(0.75rem);
+    transform: translateY(0);
   }
 
   to {
@@ -13,7 +13,7 @@
 .fadeIn {
   opacity: 0;
   will-change: opacity, transform;
-  animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: heroFadeIn 2s cubic-bezier(0.7, 0, 1, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

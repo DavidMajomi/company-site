@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { clsx } from "clsx";
 import { NAV_BRAND_NAME } from "./navbar-constants";
 import { type NavbarAppearance } from "./Navbar";
+import { NavbarBrandLink } from "./NavbarBrandLink";
 import { MenuIcon } from "./NavbarIcons";
 
 const mobileBarClass =
@@ -31,9 +31,8 @@ export function MobileNavBar({
 
   return (
     <div className={mobileBarClass}>
-      <Link
-        href="/"
-        aria-label={`${NAV_BRAND_NAME} home`}
+      <NavbarBrandLink
+        ariaLabel={`${NAV_BRAND_NAME} home`}
         className={brandClass}
       >
         <Image
@@ -44,7 +43,7 @@ export function MobileNavBar({
           className="h-6 w-6"
           priority
         />
-      </Link>
+      </NavbarBrandLink>
       <Dialog.Trigger asChild>
         <button
           type="button"
