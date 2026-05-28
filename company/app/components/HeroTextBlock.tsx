@@ -17,13 +17,8 @@ export function HeroTextBlock({
     <div
       className={`${isCentered ? "text-center" : "text-left"} ${className}`.trim()}
     >
-      {site.tagline ? (
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-          {site.tagline}
-        </p>
-      ) : null}
       <h1
-        className={`pt-2 ${isCentered ? "mx-auto" : ""}`}
+        className={isCentered ? "mx-auto" : ""}
         aria-label={site.heroHeadline}
       >
         <span className="sr-only">{site.heroHeadline}</span>

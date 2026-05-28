@@ -8,7 +8,6 @@ export const site = {
   name,
   /** All-caps label for nav and footer */
   nameDisplay: "VATHEON SYSTEMS",
-  tagline: "",
   heroHeadline: "VATHEON SYSTEMS",
   heroLead: "Building Intelligent Automated Systems for Every Business Need",
   /** Default meta description (home + fallback) */
