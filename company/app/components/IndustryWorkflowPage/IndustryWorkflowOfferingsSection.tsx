@@ -19,7 +19,7 @@ export function IndustryWorkflowOfferingsSection({
 }: IndustryWorkflowOfferingsSectionProps) {
   return (
     <section
-      className="overflow-hidden rounded-lg border border-slate-900/10 bg-white/88 max-sm:rounded-md"
+      className="overflow-hidden rounded-lg bg-white/88 max-sm:rounded-md"
       aria-labelledby="offerings-heading"
     >
       <div className="p-[clamp(1.25rem,3vw,2rem)] max-sm:p-4">
