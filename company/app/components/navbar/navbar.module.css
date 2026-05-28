@@ -14,30 +14,33 @@
 }
 
 .circle {
-  border-color: rgb(255 255 255 / 0.14);
-  background: rgb(22 61 98 / 0.74);
-  color: #fff;
-  backdrop-filter: blur(12px) saturate(1.35);
+  border-color: rgb(255 255 255 / 0.72);
+  background: rgb(255 255 255 / 0.58);
+  color: rgb(15 23 42);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.85) inset,
+    var(--shadow-glass);
+  backdrop-filter: blur(16px) saturate(1.6);
 }
 
 .circle:hover {
-  background: rgb(22 61 98 / 0.9);
+  background: rgb(255 255 255 / 0.74);
 }
 
 .overlay {
-  background: rgb(22 61 98 / 0.88);
-  backdrop-filter: blur(40px);
+  background: rgb(255 255 255 / 0.68);
+  backdrop-filter: blur(40px) saturate(1.5);
 }
 
 .overlayBorder {
-  border-color: rgb(255 255 255 / 0.12);
+  border-color: rgb(15 23 42 / 0.08);
 }
 
 .cta {
-  background: #fff;
-  color: rgb(15 23 42);
+  background: var(--color-accent);
+  color: #fff;
 }
 
 .cta:hover {
-  background: rgb(255 255 255 / 0.95);
+  background: rgb(2 124 238 / 0.92);
 }

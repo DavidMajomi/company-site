@@ -10,7 +10,7 @@ const mobileBarClass =
   "fixed top-4 left-4 right-4 z-50 flex xl:hidden items-center justify-between gap-3 px-1";
 
 const circleShadowClass =
-  "shadow-[0_8px_24px_rgba(22,61,98,0.32)]";
+  "shadow-[0_8px_32px_rgba(15,23,42,0.08)]";
 
 const circleBtnBase =
   "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";

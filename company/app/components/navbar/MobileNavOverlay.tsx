@@ -15,7 +15,7 @@ const baseBrandClass =
   "inline-flex items-center transition-opacity hover:opacity-95";
 
 const closeButtonClass =
-  "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/20";
+  "inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-slate-900/10 bg-white/50 text-slate-900 shadow-[0_1px_0_rgba(255,255,255,0.85)_inset] backdrop-blur-md transition-colors duration-150 hover:bg-white/70";
 
 type Props = {
   appearance: NavbarAppearance;

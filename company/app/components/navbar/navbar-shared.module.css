@@ -3,17 +3,17 @@
 }
 
 .overlayMuted {
-  color: rgb(148 163 184);
+  color: rgb(100 116 139);
 }
 
 .overlayHeading {
-  color: #fff;
+  color: rgb(15 23 42);
 }
 
 .overlayLink {
-  color: #fff;
+  color: rgb(15 23 42);
 }
 
 .overlayLink:hover {
-  color: #fff;
+  color: var(--color-accent);
 }
