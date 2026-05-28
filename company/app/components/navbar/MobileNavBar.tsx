@@ -7,7 +7,7 @@ import { NavbarBrandLink } from "./NavbarBrandLink";
 import { MenuIcon } from "./NavbarIcons";
 
 const mobileBarClass =
-  "fixed top-4 left-4 right-4 z-50 flex lg:hidden items-center justify-between gap-3 px-1";
+  "fixed top-4 left-4 right-4 z-50 flex xl:hidden items-center justify-between gap-3 px-1";
 
 const circleShadowClass =
   "shadow-[0_8px_24px_rgba(22,61,98,0.32)]";

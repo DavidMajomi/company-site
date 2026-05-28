@@ -34,12 +34,12 @@ export function MobileNavOverlay({
     <Dialog.Portal>
       <Dialog.Overlay
         className={clsx(
-          "fixed inset-0 z-60 lg:hidden",
+          "fixed inset-0 z-60 xl:hidden",
           appearance.overlay,
         )}
       />
       <Dialog.Content
-        className="fixed inset-0 z-60 flex flex-col lg:hidden focus:outline-none"
+        className="fixed inset-0 z-60 flex flex-col xl:hidden focus:outline-none"
       >
         <Dialog.Title className="sr-only">Site navigation</Dialog.Title>
         <Dialog.Description className="sr-only">
