@@ -17,7 +17,7 @@ type FooterSection = {
 
 const sectionTitleClassName =
   "mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400";
-const sectionLinkClassName = "transition hover:text-(--color-accent)";
+const sectionLinkClassName = "no-underline transition hover:text-(--color-accent)";
 
 function FooterSectionList({ section }: { section: FooterSection }) {
   return (
