@@ -1,0 +1,1 @@
+export { IndustryWorkflowPage } from "./IndustryWorkflowPage";
