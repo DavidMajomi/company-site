@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { IndustryHomeCard } from "../components/IndustryHomeCard";
 import { contactNav } from "../data/navigation";
-import { industrySummaries } from "../data/industries";
+import { IndustryHomeCards } from "./IndustryHomeCards";
 
 export function IndustriesHomeSection() {
   return (
@@ -22,15 +21,7 @@ export function IndustriesHomeSection() {
           </p>
         </div>
 
-        <ul className="mt-12 flex list-none flex-wrap justify-center gap-4 p-0 sm:gap-5 lg:gap-6">
-          {industrySummaries.map((industry, index) => (
-            <IndustryHomeCard
-              key={industry.slug}
-              industry={industry}
-              index={index}
-            />
-          ))}
-        </ul>
+        <IndustryHomeCards />
 
         <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
           <Link

@@ -1,24 +1,26 @@
+"use client";
+
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { IndustrySummary } from "../data/industries";
 import { IndustryPseudoImage } from "./IndustryPseudoImage";
 
-const CARD_ANIMATION_BASE_DELAY_S = 0.1;
-const CARD_ANIMATION_STAGGER_S = 0.12;
-
 type IndustryHomeCardProps = {
   industry: IndustrySummary;
-  index: number;
+  variants: Variants;
 };
 
-export function IndustryHomeCard({ industry, index }: IndustryHomeCardProps) {
+export function IndustryHomeCard({
+  industry,
+  variants,
+}: IndustryHomeCardProps) {
   const hasPhoto = Boolean(industry.imageSrc);
-  const animationDelay = `${CARD_ANIMATION_BASE_DELAY_S + index * CARD_ANIMATION_STAGGER_S}s`;
 
   return (
-    <li
-      className="group relative w-[min(100%,15rem)] shrink-0 list-none opacity-0 translate-y-5 animate-industry-card-in motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3rem)/3)]"
-      style={{ animationDelay }}
+    <motion.li
+      variants={variants}
+      className="group relative w-[min(100%,15rem)] shrink-0 list-none sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3rem)/3)]"
     >
       <Link
         href={industry.href}
@@ -60,6 +62,6 @@ export function IndustryHomeCard({ industry, index }: IndustryHomeCardProps) {
           </p>
         </div>
       </Link>
-    </li>
+    </motion.li>
   );
 }

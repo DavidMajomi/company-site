@@ -6,20 +6,7 @@ import type { Config } from "tailwindcss";
  */
 const config: Config = {
   theme: {
-    extend: {
-      keyframes: {
-        "industry-card-in": {
-          to: {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-      },
-      animation: {
-        "industry-card-in":
-          "industry-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
-      },
-    },
+    extend: {},
     fontSize: {
       micro: "0.6875rem", /* 11px — footer legal */
       eyebrow: "0.72rem",
