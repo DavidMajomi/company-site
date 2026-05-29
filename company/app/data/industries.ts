@@ -7,7 +7,6 @@ export type IndustryPage = IndustryLink & {
   slug: string;
   overview: string;
   headline: string;
-  painPointsTitle: string;
   painPoints: string[];
   outcomesTitle: string;
   outcomes: string[];
@@ -23,7 +22,6 @@ const industryPages: IndustryPage[] = [
     headline: "From property signal to market action.",
     overview:
       "Foreclosure intelligence, curated property datasets, acquisition-focused analytics, and campaign measurement for teams working distressed and opportunity-driven real estate markets.",
-    painPointsTitle: "Unify your sales, ads, and outreach.",
     painPoints: [
       "Losing deals to failed outreach and follow up.",
       "Agents losing hours figuring out who to contact.",
@@ -47,8 +45,6 @@ const industryPages: IndustryPage[] = [
     headline: "Structured financial workflows without fragile handoffs.",
     overview:
       "Asset management, retail currency trading with core-banking integrations, business underwriting pipelines, and risk monitoring with practical baseline compliance.",
-    painPointsTitle:
-      "The page should meet prospects inside the work they already recognize.",
     painPoints: [
       "Underwriting still depends on spreadsheet checks and email exceptions.",
       "Trading experiences drift away from core banking records.",
@@ -75,8 +71,6 @@ const industryPages: IndustryPage[] = [
     headline: "Senior execution across automation, web, ads, and reporting.",
     overview:
       "Forward deployed engineers, AI automation, CRM and advertising integrations, and hands-on Google and Meta ads support for operators who need senior execution without enterprise overhead.",
-    painPointsTitle:
-      "The page should meet prospects inside the work they already recognize.",
     painPoints: [
       "Ads, landing pages, and CRM records do not share context.",
       "Manual admin work keeps pulling operators away from customers.",

@@ -43,10 +43,7 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
         headline={industry.headline}
         overview={industry.overview}
       />
-      <IndustryWorkflowProblemSection
-        title={industry.painPointsTitle}
-        painPoints={industry.painPoints}
-      />
+      <IndustryWorkflowProblemSection painPoints={industry.painPoints} />
       <IndustryWorkflowOfferingsSection
         label={industry.label}
         offerings={relevantOfferings}
