@@ -48,10 +48,7 @@ export function IndustryWorkflowPage({ industry }: IndustryWorkflowPageProps) {
         label={industry.label}
         offerings={relevantOfferings}
       />
-      <IndustryWorkflowOutcomesSection
-        title={industry.outcomesTitle}
-        outcomes={industry.outcomes}
-      />
+      <IndustryWorkflowOutcomesSection outcomes={industry.outcomes} />
     </StandardPageContent>
   );
 }

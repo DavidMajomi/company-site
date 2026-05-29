@@ -8,7 +8,6 @@ export type IndustryPage = IndustryLink & {
   overview: string;
   headline: string;
   painPoints: string[];
-  outcomesTitle: string;
   outcomes: string[];
   productSlugs: string[];
   serviceSlugs: string[];
@@ -30,7 +29,6 @@ const industryPages: IndustryPage[] = [
       "Outreach and acquisition teams work from different data.",
       "Ad performance is hard to connect back to closed deals.",
     ],
-    outcomesTitle: "What the industry page should make concrete.",
     outcomes: [
       "More deals closed",
       "Faster conversion rate and acquisition cycles.",
@@ -51,7 +49,6 @@ const industryPages: IndustryPage[] = [
       "Cross-border holdings lack a single operating view.",
       "Policy changes require too much engineering rework.",
     ],
-    outcomesTitle: "What the industry page should make concrete.",
     outcomes: [
       "Shorten time-to-decision without hiding underwriting context.",
       "Keep product activity aligned with ledger and audit expectations.",
@@ -77,7 +74,6 @@ const industryPages: IndustryPage[] = [
       "Reporting does not show which spend creates qualified demand.",
       "Basic web changes require too many vendors or templates.",
     ],
-    outcomesTitle: "What the industry page should make concrete.",
     outcomes: [
       "Improve the feedback loop between spend, leads, and real business outcomes.",
       "Replace repetitive manual work with tools your team can keep using.",
