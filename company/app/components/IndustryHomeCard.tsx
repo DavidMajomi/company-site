@@ -17,7 +17,7 @@ export function IndustryHomeCard({ industry, index }: IndustryHomeCardProps) {
 
   return (
     <li
-      className="group relative list-none opacity-0 translate-y-5 animate-industry-card-in motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0"
+      className="group relative w-[min(100%,15rem)] shrink-0 list-none opacity-0 translate-y-5 animate-industry-card-in motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3rem)/3)]"
       style={{ animationDelay }}
     >
       <Link
@@ -35,7 +35,7 @@ export function IndustryHomeCard({ industry, index }: IndustryHomeCardProps) {
               alt={industry.imageAlt ?? industry.label}
               width={500}
               height={750}
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes="(max-width: 640px) 240px, (max-width: 1024px) 50vw, 33vw"
               className="block size-full object-cover object-[center_35%] transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
             />
           ) : (
@@ -49,7 +49,7 @@ export function IndustryHomeCard({ industry, index }: IndustryHomeCardProps) {
             aria-hidden="true"
           />
         </div>
-        <div className="relative flex flex-1 flex-col p-5">
+        <div className="relative flex flex-1 flex-col p-4 sm:p-5">
           <div className="flex items-start justify-between gap-4">
             <span className="text-eyebrow font-black uppercase tracking-[0.22em] text-(--color-accent)">
               {industry.label}

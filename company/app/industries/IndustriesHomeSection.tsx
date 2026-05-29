@@ -28,7 +28,7 @@ export function IndustriesHomeSection() {
           </p>
         </div>
 
-        <ul className="mt-12 grid list-none gap-5 p-0 md:grid-cols-3 md:gap-6">
+        <ul className="mt-12 flex list-none flex-wrap justify-center gap-4 p-0 sm:gap-5 lg:gap-6">
           {industrySummaries.map((industry, index) => (
             <IndustryHomeCard
               key={industry.slug}
