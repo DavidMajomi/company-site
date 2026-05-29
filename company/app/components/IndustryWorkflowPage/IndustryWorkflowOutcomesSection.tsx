@@ -12,7 +12,7 @@ export function IndustryWorkflowOutcomesSection({
 }: IndustryWorkflowOutcomesSectionProps) {
   return (
     <section
-      className="cta-card grid gap-6 overflow-hidden p-[clamp(1.25rem,3vw,2rem)] max-sm:p-4"
+      className="grid gap-6 overflow-hidden p-[clamp(1.25rem,3vw,2rem)] max-sm:p-4"
       aria-label="Expected outcomes"
     >
       <Eyebrow text="Expected outcomes" />
