@@ -40,14 +40,13 @@ const industryPages: IndustryPage[] = [
     slug: "finance",
     href: "/industries/finance",
     label: "Finance",
-    headline: "Structured financial workflows without fragile handoffs.",
+    headline: "Financial tools and worflows to accelerate your team.",
     overview:
-      "Asset management, retail currency trading with core-banking integrations, business underwriting pipelines, and risk monitoring with practical baseline compliance.",
+      "Asset management, retail currency trading with core-banking integrations, business underwriting pipelines, and risk monitoring.",
     painPoints: [
-      "Underwriting still depends on spreadsheet checks and email exceptions.",
-      "Trading experiences drift away from core banking records.",
-      "Cross-border holdings lack a single operating view.",
-      "Policy changes require too much engineering rework.",
+      "Underwriting still depends on spreadsheet checks and manual verification.",
+      "Trading integrations with core-banking creates new compliance requirements.",
+      "Cross-border client holdings lack a single operating view.",
     ],
     outcomes: [
       "Shorten time-to-decision without hiding underwriting context.",
@@ -65,18 +64,18 @@ const industryPages: IndustryPage[] = [
     slug: "small-business",
     href: "/industries/small-business",
     label: "Small Business",
-    headline: "Senior execution across automation, web, ads, and reporting.",
+    headline: "Intelligent solutions to let you focus on what matters.",
     overview:
       "Forward deployed engineers, AI automation, CRM and advertising integrations, and hands-on Google and Meta ads support for operators who need senior execution without enterprise overhead.",
     painPoints: [
-      "Ads, landing pages, and CRM records do not share context.",
-      "Manual admin work keeps pulling operators away from customers.",
+      "Ads, landing pages, and CRM records are siloed losing you time.",
+      "Manual admin work keeps pulling you away from your customers.",
       "Reporting does not show which spend creates qualified demand.",
       "Basic web changes require too many vendors or templates.",
     ],
     outcomes: [
-      "Improve the feedback loop between spend, leads, and real business outcomes.",
-      "Replace repetitive manual work with tools your team can keep using.",
+      "Improve the speed loop between spend, leads, and real business outcomes.",
+      "Replace repetitive manual work with tools your team can trust.",
       "Launch web and reporting surfaces that are fast, measurable, and maintainable.",
     ],
     productSlugs: [],
@@ -116,6 +115,11 @@ const industryHomeImages: Partial<
     imageSrc: "/industries/finance.png",
     imageAlt:
       "Trading screen showing a candlestick chart and order book with green and red price levels",
+  },
+  "small-business": {
+    imageSrc: "/industries/small-business.png",
+    imageAlt:
+      "Small business team reviewing charts and notes together at a desk in a bright office",
   },
 };
 

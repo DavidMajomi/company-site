@@ -5,11 +5,11 @@ export type Service = Offering;
 export const services: Service[] = [
   {
     slug: "forward-deployed-engineer",
-    title: "Forward Deployed Engineer",
+    title: "Forward Deployed Engineers",
     description:
-      "Senior engineers who embed in your business to ship automation, internal tooling, integrations, and analytics—turning operational data into decisions that stick.",
+      "Engineers who embed in your business to ship automation, internal tooling, integrations, and analytics—turning operational data into decisions that stick.",
     overview:
-      "When you need capacity without another hiring cycle, we deploy engineers inside your team: building automations, internal tools, and integrations alongside the analysis and reporting that prove they work. We work alongside operators so delivery stays tied to real workflows—not generic platform demos or dashboard templates.",
+      "When you need capacity without another hiring cycle, we deploy engineers inside your team: building automations, internal tools, and integrations.",
     capabilities: [
       "AI automation, internal tooling, and integration work across CRM, Meta Ads, Google Ads, and adjacent business systems.",
       "Operational analysis, KPI design, dashboards, and executive-ready reporting.",
@@ -25,9 +25,9 @@ export const services: Service[] = [
     slug: "custom-solution-development",
     title: "Custom Solution Development",
     description:
-      "End-to-end software built around your workflows—platforms, integrations, and automation tailored to problems off-the-shelf products cannot solve.",
+      "End-to-end software built around your workflows, platforms, integrations, and automation tailored to problems off-the-shelf products cannot solve.",
     overview:
-      "When no SaaS template fits and a spreadsheet will not scale, we scope, design, and build custom solutions tied to how your business actually operates. That means discovery with stakeholders, architecture that matches your constraints, and delivery you can run in production—not a slide deck and a prototype that never ships.",
+      "We scope, design, and build custom solutions tied to your underlying business operations.",
     capabilities: [
       "Requirements discovery, solution design, and phased delivery for bespoke platforms and internal systems.",
       "Integration across CRM, ads, finance, property, and legacy tools where data and processes are fragmented.",
@@ -61,9 +61,9 @@ export const services: Service[] = [
     slug: "digital-advertising",
     title: "Google & Meta Ads Expertise",
     description:
-      "Hands-on Google and Meta advertising support—strategy, execution, and measurement—for teams that need performance without agency theater.",
+      "Hands-on Google and Meta advertising support—strategy, execution, and measurement for teams that need performance.",
     overview:
-      "Paid search and paid social only work when targeting, creative, landing paths, and measurement line up. We help small businesses and specialist operators run Google and Meta campaigns with clear accountability for lead quality, cost, and downstream conversion.",
+      "Paid search and paid social only work when targeting, measurement line up. We help small businesses create Google and Meta campaigns with clear accountability for lead quality, cost, and downstream conversion.",
     capabilities: [
       "Campaign structure, audience design, and creative testing on Google and Meta.",
       "Conversion tracking setup and reporting that ties spend to business outcomes.",

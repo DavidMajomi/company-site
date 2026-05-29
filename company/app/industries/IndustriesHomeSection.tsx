@@ -15,13 +15,7 @@ export function IndustriesHomeSection() {
       </h1>
       <div className="mx-auto max-w-6xl px-6  md:px-10 ">
         <div>
-          <h2
-            id="industries-heading"
-            className="mt-4 font-serif text-fluid-section font-medium leading-tight text-(--color-primary)"
-          >
-            Systems shaped by the work you already do
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-(--color-text-muted) md:text-lead">
+          <p className="mt-4 text-base leading-relaxed text-(--color-text-muted) md:text-xl">
             From foreclosure intelligence to underwriting pipelines, we meet
             teams inside the workflows they recognize, then build the
             automation, data, and execution layer around them.
