@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.defaultDescription,
+  icons: {
+    icon: "/vatheon-v-mark.svg",
+  },
 };
 
 export default function RootLayout({
