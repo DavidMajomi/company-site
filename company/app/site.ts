@@ -18,7 +18,7 @@ export const site = {
       "Forward deployed engineers, custom solution development, custom web development, Google and Meta ads expertise, and real estate services including foreclosure analysis and ad targeting effectiveness.",
     products:
       "Diaspora asset management, retail currency trading, business underwriting pipelines, property security intelligence, nonprofit analytics, risk monitoring, and real estate intelligence platforms with curated alternative data.",
-    contact: `Reach ${name} by phone, email, or web. Talk to our team about technologies and solutions for your organization.`,
+    contact: `Reach ${name} by email or web. Talk to our team about technologies and solutions for your organization.`,
   },
   cta: {
     heading:

@@ -8,11 +8,6 @@ type FooterContactLine = {
 export const footerContactLines: FooterContactLine[] = [
   {
     variant: "link",
-    href: "tel:+1-555-000-0000",
-    label: "+1 (555) 000-0000",
-  },
-  {
-    variant: "link",
     href: "mailto:info@vatheon.com",
     label: "info@vatheon.com",
   },

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Globe, Mail, Phone } from "lucide-react";
+import { Globe, Mail } from "lucide-react";
 import { footerContactLines } from "../data/footer";
 import { productsNav } from "../data/navigation";
 import { StandardPageContent } from "../components/StandardPageContent";
@@ -13,14 +13,12 @@ export const metadata: Metadata = {
 
 const contactIconClass = "h-6 w-6";
 
-function linkKind(href: string): "phone" | "email" | "web" {
-  if (href.startsWith("tel:")) return "phone";
+function linkKind(href: string): "email" | "web" {
   if (href.startsWith("mailto:")) return "email";
   return "web";
 }
 
 const linkMeta = {
-  phone: { title: "Call us", icon: Phone },
   email: { title: "Email", icon: Mail },
   web: { title: "Website", icon: Globe },
 } as const;
@@ -41,7 +39,7 @@ export default function ContactPage() {
           Talk to us about your next project.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-(--color-text-muted)">
-          Reach out by phone, email, or through our website. We keep the process
+          Reach out by email or through our website. We keep the process
           straightforward and respond with practical next steps.
         </p>
       </section>
@@ -115,7 +113,7 @@ export default function ContactPage() {
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
                 <span>
-                  We reply with the best next step, usually by email or phone.
+                  We reply with the best next step by email.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -124,7 +122,7 @@ export default function ContactPage() {
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
                 <span>
-                  If useful, we set up a short call to clarify scope or timing.
+                  If useful, we follow up to clarify scope or timing.
                 </span>
               </li>
             </ul>

@@ -7,7 +7,7 @@ export const services: Service[] = [
     slug: "forward-deployed-engineer",
     title: "Forward Deployed Engineers",
     description:
-      "Engineers who embed in your business to ship automation, internal tooling, integrations, and analytics—turning operational data into decisions that stick.",
+      "Embedded Engineers who automate operations, connect systems, and build internal tools that help companies scale without adding headcount.",
     overview:
       "When you need capacity without another hiring cycle, we deploy engineers inside your team: building automations, internal tools, and integrations.",
     capabilities: [
