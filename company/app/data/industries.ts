@@ -23,19 +23,19 @@ const industryPages: IndustryPage[] = [
     headline: "From property signal to market action.",
     overview:
       "Foreclosure intelligence, curated property datasets, acquisition-focused analytics, and campaign measurement for teams working distressed and opportunity-driven real estate markets.",
-    painPointsTitle:
-      "The page should meet prospects inside the work they already recognize.",
+    painPointsTitle: "Unify your sales, ads, and outreach.",
     painPoints: [
-      "County records arrive in inconsistent formats.",
+      "Losing deals to failed outreach and follow up.",
+      "Agents losing hours figuring out who to contact.",
+      "Manual foreclosure data collection is losing lots of time.",
       "Market research is trapped in spreadsheets.",
       "Outreach and acquisition teams work from different data.",
-      "Ad performance is hard to connect back to property signals.",
+      "Ad performance is hard to connect back to closed deals.",
     ],
     outcomesTitle: "What the industry page should make concrete.",
     outcomes: [
-      "Replace county-by-county research with one searchable intelligence layer.",
-      "Move faster from signal discovery to outreach or acquisition review.",
-      "Build dashboards and models on datasets your team can explain.",
+      "More deals closed",
+      "Faster conversion rate and acquisition cycles.",
     ],
     productSlugs: ["real-estate-intelligence", "real-estate-alternative-data"],
     serviceSlugs: ["forward-deployed-engineer", "digital-advertising"],
@@ -107,10 +107,12 @@ export type IndustrySummary = IndustryLink & {
   imageAlt?: string;
 };
 
-export const industries: IndustryLink[] = industryPages.map(({ href, label }) => ({
-  href,
-  label,
-}));
+export const industries: IndustryLink[] = industryPages.map(
+  ({ href, label }) => ({
+    href,
+    label,
+  }),
+);
 
 const industryHomeImages: Partial<
   Record<string, Pick<IndustrySummary, "imageSrc" | "imageAlt">>
