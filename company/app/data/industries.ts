@@ -99,10 +99,53 @@ const industryPages: IndustryPage[] = [
   },
 ];
 
+export type IndustrySummary = IndustryLink & {
+  slug: string;
+  headline: string;
+  overview: string;
+  imageSrc?: string;
+  imageAlt?: string;
+};
+
 export const industries: IndustryLink[] = industryPages.map(({ href, label }) => ({
   href,
   label,
 }));
+
+const industryHomeImages: Partial<
+  Record<string, Pick<IndustrySummary, "imageSrc" | "imageAlt">>
+> = {
+  "real-estate": {
+    imageSrc: "/industries/real-estate.png",
+    imageAlt:
+      "Modern apartment building with stacked balconies viewed from below against a pale sky",
+  },
+  finance: {
+    imageSrc: "/industries/finance.png",
+    imageAlt:
+      "Trading screen showing a candlestick chart and order book with green and red price levels",
+  },
+};
+
+export const industrySummaries: IndustrySummary[] = industryPages.map(
+  ({ slug, href, label, headline, overview }) => {
+    const summary: IndustrySummary = {
+      slug,
+      href,
+      label,
+      headline,
+      overview,
+    };
+    const image = industryHomeImages[slug];
+
+    if (image?.imageSrc) {
+      summary.imageSrc = image.imageSrc;
+      summary.imageAlt = image.imageAlt;
+    }
+
+    return summary;
+  },
+);
 
 export function getIndustryBySlug(slug: string) {
   return industryPages.find((industry) => industry.slug === slug);

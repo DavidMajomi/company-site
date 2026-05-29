@@ -1,6 +1,7 @@
 import { CtaSection } from "./components/CtaSection";
 import { HeroCentered } from "./components/HeroCentered";
 import { HomeHashScroller } from "./components/HomeHashScroller";
+import { IndustriesHomeSection } from "./industries/IndustriesHomeSection";
 import { ProductsHomeSection } from "./products/ProductsHomeSection";
 import { ServicesHomeSection } from "./services/ServicesHomeSection";
 
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-0 px-4 sm:px-6">
+        <div>
+          <IndustriesHomeSection />
+        </div>
         <div className="py-24">
           <ProductsHomeSection />
         </div>

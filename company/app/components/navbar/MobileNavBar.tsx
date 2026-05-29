@@ -18,13 +18,28 @@ const circleBtnBase =
 type Props = {
   appearance: NavbarAppearance;
   mobileOpen: boolean;
+  plainTrigger?: boolean;
+  onMenuClick?: () => void;
 };
 
 export function MobileNavBar({
   appearance,
   mobileOpen,
+  plainTrigger = false,
+  onMenuClick,
 }: Props) {
   const circleClass = clsx(circleBtnBase, circleShadowClass, appearance.circle);
+
+  const menuButton = (
+    <button
+      type="button"
+      className={circleClass}
+      aria-label={mobileOpen ? "Close menu" : "Open menu"}
+      {...(plainTrigger ? { onClick: onMenuClick } : {})}
+    >
+      <MenuIcon open={mobileOpen} />
+    </button>
+  );
 
   return (
     <div className={mobileBarClass}>
@@ -41,15 +56,11 @@ export function MobileNavBar({
           priority
         />
       </NavbarBrandLink>
-      <Dialog.Trigger asChild>
-        <button
-          type="button"
-          className={circleClass}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          <MenuIcon open={mobileOpen} />
-        </button>
-      </Dialog.Trigger>
+      {plainTrigger ? (
+        menuButton
+      ) : (
+        <Dialog.Trigger asChild>{menuButton}</Dialog.Trigger>
+      )}
     </div>
   );
 }
