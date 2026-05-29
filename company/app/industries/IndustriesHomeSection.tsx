@@ -2,7 +2,6 @@ import Link from "next/link";
 import { IndustryHomeCard } from "../components/IndustryHomeCard";
 import { contactNav } from "../data/navigation";
 import { industrySummaries } from "../data/industries";
-import { Eyebrow } from "../shared/Eyebrow";
 
 export function IndustriesHomeSection() {
   return (
