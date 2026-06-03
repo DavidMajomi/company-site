@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { SitePageShell } from "./components/SitePageShell";
 import { site } from "./site";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className="antialiased">
         <SitePageShell>{children}</SitePageShell>
+        <Analytics />
       </body>
     </html>
   );
