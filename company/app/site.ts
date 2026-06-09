@@ -3,9 +3,11 @@
  * Root layout uses `title.template` so pages only set the segment before ` | ${site.name}`.
  */
 const name = "Vatheon Systems";
+const url = "https://www.vatheon.com";
 
 export const site = {
   name,
+  url,
   /** All-caps label for nav and footer */
   nameDisplay: "VATHEON SYSTEMS",
   heroHeadline: "VATHEON SYSTEMS",
