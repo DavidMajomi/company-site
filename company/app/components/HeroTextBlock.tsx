@@ -19,12 +19,14 @@ export function HeroTextBlock({
     >
       <h1
         className={isCentered ? "mx-auto" : ""}
-        aria-label={site.heroHeadline}
+        aria-label={`${site.shortName}, ${site.heroHeadline}`}
       >
-        <span className="sr-only">{site.heroHeadline}</span>
+        <span className="sr-only">
+          {site.shortName} — {site.heroHeadline}
+        </span>
         <Image
           src="/vatheon_systems_black.svg"
-          alt="Vatheon Systems logo"
+          alt={`${site.shortName} (${site.name}) logo`}
           aria-hidden="true"
           width={4229}
           height={300}
