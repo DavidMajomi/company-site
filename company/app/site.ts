@@ -8,7 +8,7 @@ const url = "https://www.vatheon.com";
 const contactEmail = "info@vatheon.com";
 
 const organizationDescription =
-  "Intelligent automated systems for asset management, real estate intelligence, underwriting, analytics, and risk monitoring backed by a fast moving engineering team.";
+  "Intelligent automated systems for asset management, real estate, underwriting, analytics, and risk monitoring backed by a fast moving engineering team.";
 
 export const site = {
   name,
@@ -22,8 +22,8 @@ export const site = {
   /** Visible brand line for footer and other on-page copy */
   brandIntro: `${shortName} builds intelligent automated systems for every business need.`,
   /** Default meta description (home + fallback) */
-  defaultDescription: `${shortName} (${name}) builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
-  organizationDescription: `${shortName} (${name}) builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
+  defaultDescription: `${name} builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
+  organizationDescription: `${name} builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
   pageMeta: {
     services:
       "Forward deployed engineers, custom solution development, custom web development, Google and Meta ads expertise, and real estate services including foreclosure analysis and ad targeting effectiveness.",
