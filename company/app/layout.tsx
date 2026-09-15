@@ -24,16 +24,18 @@ export const metadata: Metadata = {
     description: site.defaultDescription,
     images: [
       {
-        url: "/vatheon_systems_black.svg",
+        url: "/vatheon-social-white.png",
+        width: 1200,
+        height: 630,
         alt: `${site.name} logo`,
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: site.name,
     description: site.defaultDescription,
-    images: ["/vatheon_systems_black.svg"],
+    images: ["/vatheon-social-white.png"],
   },
   icons: {
     icon: "/vatheon-v-mark.svg",
