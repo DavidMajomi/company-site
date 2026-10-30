@@ -14,12 +14,12 @@ export type Product = Offering & {
 
 export const products: Product[] = [
   {
-    slug: "diaspora-asset-management",
-    title: "Diaspora Asset Management",
+    slug: "cross-border-asset-management",
+    title: "Cross Border Asset Management",
     description:
       "Portfolio and asset management software built for diaspora investors who need visibility, control, and reporting across holdings in multiple markets.",
     overview:
-      "Diaspora Asset Management helps investors track portfolios, monitor performance, and manage assets across borders from one place. It is designed for individuals and firms that need practical tooling—not another generic wealth app—for real holdings, real currencies, and real compliance expectations.",
+      "Cross Border Asset Management helps investors track portfolios, monitor performance, and manage assets across borders from one place. It is designed for individuals and firms that need practical tooling—not another generic wealth app—for real holdings, real currencies, and real compliance expectations.",
     capabilities: [
       "Portfolio tracking and performance reporting across markets and asset classes.",
       "Holdings, cash flow, and document management in a single operating view.",

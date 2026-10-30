@@ -54,7 +54,7 @@ const industryPages: IndustryPage[] = [
       "Give stakeholders cleaner reporting across holdings and workflows.",
     ],
     productSlugs: [
-      "diaspora-asset-management",
+      "cross-border-asset-management",
       "retail-currency-trading",
       "business-underwriting-pipelines",
     ],
