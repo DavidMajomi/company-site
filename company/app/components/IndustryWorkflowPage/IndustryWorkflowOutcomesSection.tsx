@@ -13,9 +13,9 @@ export function IndustryWorkflowOutcomesSection({
   return (
     <section
       className="grid gap-6 overflow-hidden p-[clamp(1.25rem,3vw,2rem)] max-sm:p-4"
-      aria-label="Expected outcomes"
+      aria-label="What you get"
     >
-      <Eyebrow text="Expected outcomes" />
+      <Eyebrow text="What you get" />
       <div className="flex flex-wrap justify-center gap-4 [&_svg]:text-(--color-accent)">
         {outcomes.map((outcome, index) => {
           const Icon = proofIcons[index] ?? FileCheck2;

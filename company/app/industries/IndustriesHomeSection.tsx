@@ -15,9 +15,8 @@ export function IndustriesHomeSection() {
       <div className="mx-auto max-w-6xl px-6  md:px-10 ">
         <div>
           <p className="mt-4 text-base leading-relaxed text-(--color-text-muted) md:text-xl">
-            From foreclosure intelligence to underwriting pipelines, we meet
-            teams inside the workflows they recognize, then build the
-            automation, data, and execution layer around them.
+            We start with how your team already works, then build the
+            automation, data tools, and ad support around it.
           </p>
         </div>
 

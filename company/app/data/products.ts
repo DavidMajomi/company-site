@@ -17,79 +17,79 @@ export const products: Product[] = [
     slug: "cross-border-asset-management",
     title: "Cross Border Asset Management",
     description:
-      "Portfolio and asset management software built for diaspora investors who need visibility, control, and reporting across holdings in multiple markets.",
+      "Portfolio software for diaspora investors who need to see, manage, and report on holdings in several countries.",
     overview:
-      "Cross Border Asset Management helps investors track portfolios, monitor performance, and manage assets across borders from one place. It is designed for individuals and firms that need practical tooling—not another generic wealth app—for real holdings, real currencies, and real compliance expectations.",
+      "Cross Border Asset Management lets investors track portfolios, watch performance, and manage assets in several countries from one place. It's built for individuals and firms with real holdings, multiple currencies, and compliance rules to follow.",
     capabilities: [
-      "Portfolio tracking and performance reporting across markets and asset classes.",
-      "Holdings, cash flow, and document management in a single operating view.",
-      "Configurable workflows for onboarding, rebalancing, and investor reporting.",
+      "Portfolio tracking and performance reports across markets and asset types.",
+      "Holdings, cash flow, and documents in one view.",
+      "Adjustable workflows for onboarding, rebalancing, and investor reports.",
     ],
     outcomes: [
-      "Reduce manual spreadsheet work when reconciling cross-border holdings.",
-      "Give stakeholders a clearer picture of exposure, liquidity, and performance.",
+      "Less spreadsheet work reconciling holdings across borders.",
+      "A clearer picture of risk, cash on hand, and performance.",
     ],
   },
   {
     slug: "retail-currency-trading",
     title: "Retail Currency Trading Software",
     description:
-      "Retail FX trading software with core-banking integrations so institutions can offer currency products without stitching together fragile point solutions.",
+      "Retail currency trading software that connects to your core banking system, so you can offer currency products without piecing together separate tools.",
     overview:
-      "Our retail currency trading platform connects customer-facing trading experiences to the core banking and ledger systems that actually move money. Teams get configurable product rules, integration patterns for existing cores, and operational controls suited to regulated retail FX.",
+      "Our platform connects what customers see when they trade to the banking and ledger systems that move the money. You get adjustable product rules, ways to connect to your existing core system, and the controls regulated retail FX needs.",
     capabilities: [
-      "Retail FX order capture, pricing, and settlement workflows.",
-      "Core-banking and ledger integrations via documented API patterns.",
-      "Operational controls for limits, compliance checks, and exception handling.",
+      "Order entry, pricing, and settlement for retail FX.",
+      "Core banking and ledger connections through documented APIs.",
+      "Controls for limits, compliance checks, and exceptions.",
     ],
     outcomes: [
-      "Launch or extend retail FX without rebuilding integrations for every release.",
-      "Keep trading activity aligned with core-banking records and audit expectations.",
+      "Launch or expand retail FX without rebuilding connections every release.",
+      "Trading activity that matches your core banking records and audit needs.",
     ],
   },
   {
     slug: "business-underwriting-pipelines",
     title: "Underwriting Pipelines for Businesses",
     description:
-      "Configurable underwriting pipelines that help lenders and insurers evaluate business applicants with clearer data, faster decisions, and less manual rework.",
+      "Underwriting pipelines for lenders and insurers: clearer data, faster decisions, less rework.",
     overview:
-      "Business underwriting often breaks down in handoffs—spreadsheet checks, email exceptions, and systems that do not share context. Our pipeline product gives teams a structured path from application intake through decisioning, with room to plug in credit policies, third-party data, and human review where it matters.",
+      "Business underwriting often breaks down in handoffs: spreadsheet checks, exceptions sent by email, and systems that don't share information. Our pipeline gives your team one path from application to decision, with room for your credit policies, outside data, and human review where it counts.",
     capabilities: [
-      "Application intake, document collection, and structured business data capture.",
-      "Rules-driven decisioning with configurable stages, queues, and review paths.",
-      "Integrations for bureau data, financial statements, and downstream servicing systems.",
+      "Application intake, document collection, and business data capture.",
+      "Rules-based decisions with adjustable stages, queues, and review steps.",
+      "Connections for credit bureau data, financial statements, and loan servicing systems.",
     ],
     outcomes: [
-      "Shorten time-to-decision without sacrificing underwriting quality.",
-      "Make policy changes without rewriting the entire origination stack.",
+      "Decide faster without lowering your underwriting standards.",
+      "Change policies without rebuilding your whole origination system.",
     ],
   },
   {
     slug: "real-estate-intelligence",
     title: "Real Estate Intelligence Platform",
     description:
-      "A real estate intelligence platform for foreclosure data aggregation, market analysis, and decision support across distressed and opportunity-driven workflows.",
+      "Foreclosure data, market analysis, and decision support for teams working distressed real estate.",
     overview:
-      "Real estate teams lose time chasing foreclosure records across counties, formats, and update cadences. Our platform aggregates foreclosure and related market signals, normalizes them for analysis, and supports the workflows investors, analysts, and operators use to prioritize opportunities.",
+      "Real estate teams lose time chasing foreclosure records across counties that each use different formats and update on different schedules. Our platform pulls foreclosure and market data into one place, cleans it up so it can be compared, and helps investors and analysts decide which opportunities to chase first.",
     capabilities: [
-      "Foreclosure data aggregation, normalization, and change tracking.",
-      "Search, filtering, and map views for market and property-level analysis.",
-      "Exports and API access for downstream models, CRMs, and campaign tools.",
+      "Foreclosure data collected, standardized, and tracked for changes.",
+      "Search, filters, and map views for markets and individual properties.",
+      "Exports and API access for your models, CRM, and campaign tools.",
     ],
     outcomes: [
-      "Replace manual county-by-county research with a unified intelligence layer.",
-      "Move faster from signal discovery to outreach, underwriting, or acquisition review.",
+      "Stop researching county by county. Get it all in one place.",
+      "Go from spotting a lead to outreach, underwriting, or review faster.",
     ],
     sections: [
       {
-        eyebrow: "Foreclosure intelligence",
-        title: "Aggregation and analysis built for acquisition workflows.",
+        eyebrow: "Foreclosure data",
+        title: "Built for people who buy properties.",
         description:
-          "The platform brings county filings, auction schedules, and property context into one searchable layer so teams can compare markets and act on fresh signals.",
+          "County filings, auction schedules, and property details in one searchable place, so you can compare markets and act on new leads.",
         bullets: [
-          "Track new filings, status changes, and auction timelines in one place.",
-          "Compare markets with normalized fields instead of incompatible county exports.",
-          "Feed outreach, underwriting, and portfolio review from the same dataset.",
+          "Track new filings, status changes, and auction dates in one place.",
+          "Compare markets using consistent fields instead of mismatched county exports.",
+          "Use the same data for outreach, underwriting, and portfolio review.",
         ],
       },
     ],
@@ -98,17 +98,17 @@ export const products: Product[] = [
     slug: "real-estate-alternative-data",
     title: "Curated Datasets & Alternative Data",
     description:
-      "Curated real estate datasets and alternative data products for teams building models, dashboards, and market intelligence on top of reliable sources.",
+      "Real estate datasets and alternative data for teams building models and dashboards on reliable sources.",
     overview:
-      "Models and dashboards are only as good as the inputs behind them. We curate real estate datasets and alternative data feeds—foreclosure activity, market signals, and enrichment layers—so analysts and product teams can spend time on insight instead of source wrangling.",
+      "A model is only as good as its data. We put together real estate datasets and alternative data feeds, including foreclosure activity, market signals, and extra property details, so your analysts can spend their time on answers instead of cleaning data.",
     capabilities: [
-      "Curated real estate datasets with documented fields, refresh cadence, and lineage.",
-      "Alternative data layers for enrichment, scoring, and market comparison.",
-      "Delivery via API, batch export, and integration-friendly formats.",
+      "Real estate datasets with documented fields, update schedules, and sources.",
+      "Extra data for filling in details, scoring, and comparing markets.",
+      "Delivered by API, bulk export, or common file formats.",
     ],
     outcomes: [
-      "Reduce time spent cleaning and reconciling inconsistent property data.",
-      "Ship models and dashboards on sources your team can explain to stakeholders.",
+      "Less time cleaning up inconsistent property data.",
+      "Build models and dashboards on sources you can explain to others.",
     ],
   },
 ];

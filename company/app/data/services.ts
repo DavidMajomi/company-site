@@ -7,71 +7,71 @@ export const services: Service[] = [
     slug: "forward-deployed-engineer",
     title: "Forward Deployed Engineers",
     description:
-      "Embedded Engineers who automate operations, connect systems, and build internal tools that help companies scale without adding headcount.",
+      "An engineer who works inside your business to automate tasks, connect your systems, and build internal tools, so you can grow without hiring.",
     overview:
-      "When you need capacity without another hiring cycle, we deploy engineers inside your team: building automations, internal tools, and integrations.",
+      "Need more hands but not a full-time hire? One of our engineers joins your team and builds automations, internal tools, and connections between the software you already use.",
     capabilities: [
-      "AI automation, internal tooling, and integration work across CRM, Meta Ads, Google Ads, and adjacent business systems.",
-      "Operational analysis, KPI design, dashboards, and executive-ready reporting.",
-      "Support for finance, marketing, and real estate workflows where data is fragmented.",
+      "Automating repetitive tasks and connecting your CRM, Google Ads, Meta Ads, and other business tools.",
+      "Working out which numbers matter, then building dashboards and reports you can read quickly.",
+      "Help for finance, marketing, and real estate teams whose data is scattered across tools.",
     ],
     outcomes: [
-      "Ship practical tooling and reporting faster than hiring and onboarding a full internal team.",
-      "Reduce manual work by connecting systems and answering high-priority business questions in parallel.",
-      "Build habits and artifacts your team can reuse after the engagement.",
+      "Get tools and reports built faster than hiring and training someone.",
+      "Cut manual work by connecting your systems.",
+      "Your team keeps the documentation and know-how when we're done.",
     ],
   },
   {
     slug: "custom-solution-development",
     title: "Custom Solution Development",
     description:
-      "End-to-end software built around your workflows, platforms, integrations, and automation tailored to problems off-the-shelf products cannot solve.",
+      "Software built around how you work, for problems off-the-shelf products don't solve.",
     overview:
-      "We scope, design, and build custom solutions tied to your underlying business operations.",
+      "We learn how your business runs, then design and build software to fit it.",
     capabilities: [
-      "Requirements discovery, solution design, and phased delivery for bespoke platforms and internal systems.",
-      "Integration across CRM, ads, finance, property, and legacy tools where data and processes are fragmented.",
-      "Automation, reporting, and operational workflows packaged as software your team owns and extends.",
+      "Working out what you need, then building it in phases.",
+      "Connecting your CRM, ads, finance tools, and older systems so your data isn't stuck in separate places.",
+      "Automation and reporting delivered as software your team owns.",
     ],
     outcomes: [
-      "Replace manual workarounds with software shaped to your rules, not a vendor's defaults.",
-      "Connect disconnected systems so decisions run on one source of truth.",
-      "Leave with documented, maintainable code—not a dependency on perpetual custom work.",
+      "Replace manual workarounds with software that follows your rules, not a vendor's defaults.",
+      "Keep your data in one place so everyone works from the same numbers.",
+      "You get documented code you can maintain, so you're not tied to us.",
     ],
   },
   {
     slug: "web-development",
     title: "Web Development",
     description:
-      "Custom websites and web applications built for performance, accessibility, and maintainability—without the agency handoff treadmill.",
+      "Custom websites and web apps that are fast, accessible, and easy to maintain, without the agency runaround.",
     overview:
-      "Your site or product should load fast, work on every device, and connect to the systems your business already runs on. We design and build marketing sites, customer portals, and internal web apps with modern stacks and clear ownership—so you ship something your team can extend, not a black box that needs us on retainer to change a headline.",
+      "Your site should load fast, work on any device, and connect to the tools you already use. We build marketing sites, customer portals, and internal web apps that your team can update without calling us.",
     capabilities: [
-      "Marketing sites, landing pages, and content-driven experiences with SEO and analytics wired in from day one.",
-      "Customer-facing web apps, dashboards, and portals integrated with CRM, auth, payments, and APIs.",
-      "Performance, accessibility, and responsive design as baseline requirements—not optional add-ons.",
+      "Marketing sites and landing pages with SEO and analytics set up from the start.",
+      "Customer web apps, dashboards, and portals connected to your CRM, logins, payments, and other tools.",
+      "Speed, accessibility, and mobile layouts are included, not extras.",
     ],
     outcomes: [
-      "Launch a credible web presence or product surface without stitching together freelancers and templates.",
-      "Keep pages fast and measurable so traffic and ad spend convert instead of bouncing.",
-      "Own the codebase and deployment path when the engagement ends.",
+      "A professional website without juggling freelancers and templates.",
+      "Fast pages you can measure, so ad clicks turn into customers instead of bounces.",
+      "You own the code and the hosting setup when we finish.",
     ],
   },
   {
     slug: "digital-advertising",
     title: "Google & Meta Ads Expertise",
     description:
-      "Hands-on Google and Meta advertising support—strategy, execution, and measurement for teams that need performance.",
+      "Hands-on Google and Meta ads help: planning, setup, management, and tracking.",
     overview:
-      "Paid search and paid social only work when targeting, measurement line up. We help small businesses create Google and Meta campaigns with clear accountability for lead quality, cost, and downstream conversion.",
+      "Ads only pay off when targeting and tracking are set up right. We help small businesses run Google and Meta campaigns and report on lead quality, cost, and what happens after a lead comes in.",
     capabilities: [
-      "Campaign structure, audience design, and creative testing on Google and Meta.",
-      "Conversion tracking setup and reporting that ties spend to business outcomes.",
-      "Ongoing optimization and integration with CRM or lead-routing workflows.",
+      "Campaign setup, audience targeting, and ad testing on Google and Meta.",
+      "Conversion tracking and reports that tie your spend to results.",
+      "Ongoing tuning, plus connecting leads to your CRM or follow-up process.",
     ],
     outcomes: [
-      "Improve ad targeting effectiveness with tighter feedback between spend and results.",
-      "Stop guessing which campaigns deserve budget next month.",
+      "Better targeting through a tighter link between spend and results.",
+      "Know which campaigns deserve next month's budget.",
     ],
   },
 ];

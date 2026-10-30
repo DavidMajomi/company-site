@@ -26,11 +26,10 @@ export default function NotFound() {
           id="not-found-heading"
           className="mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-(--color-primary) md:text-5xl"
         >
-          This page could not be found.
+          We can't find that page.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-(--color-text-muted)">
-          The link may be broken, or the page may have moved. Head back to the
-          home page or browse our products and services.
+          The link may be broken or the page may have moved. Head back home or look through our products and services.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button href={heroHref}>Back to home</Button>

@@ -8,7 +8,7 @@ const url = "https://www.vatheon.com";
 const contactEmail = "info@vatheon.com";
 
 const organizationDescription =
-  "Intelligent automated systems for asset management, real estate, underwriting, analytics, and risk monitoring backed by a fast moving engineering team.";
+  "custom software, automation, and ad management for small businesses, plus data tools for real estate and finance teams.";
 
 export const site = {
   name,
@@ -18,24 +18,24 @@ export const site = {
   /** All-caps label for nav and footer */
   nameDisplay: "VATHEON SYSTEMS",
   heroHeadline: "VATHEON SYSTEMS",
-  heroLead: "Building Intelligent Automated Systems for Every Business Need",
+  heroLead: "Custom software and automation for small businesses",
   /** Visible brand line for footer and other on-page copy */
-  brandIntro: `${shortName} builds intelligent automated systems for every business need.`,
+  brandIntro: `${shortName} builds custom software and automation for small businesses.`,
   /** Default meta description (home + fallback) */
-  defaultDescription: `${name} builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
-  organizationDescription: `${name} builds ${organizationDescription.charAt(0).toLowerCase()}${organizationDescription.slice(1)}`,
+  defaultDescription: `${name} builds ${organizationDescription}`,
+  organizationDescription: `${name} builds ${organizationDescription}`,
   pageMeta: {
     services:
-      "Forward deployed engineers, custom solution development, custom web development, Google and Meta ads expertise, and real estate services including foreclosure analysis and ad targeting effectiveness.",
+      "Engineers who work inside your business, custom software, websites, and Google and Meta ads management, plus foreclosure analysis and ad targeting for real estate.",
     products:
-      "Cross border asset management, retail currency trading, business underwriting pipelines, property security intelligence, nonprofit analytics, risk monitoring, and real estate intelligence platforms with curated alternative data.",
-    contact: `Reach ${shortName} (${name}) by email or web. Talk to our team about technologies and solutions for your organization.`,
+      "Software for cross-border asset management, retail currency trading, business underwriting, and real estate data, including foreclosure tracking.",
+    contact: `Email ${shortName} and tell us what you need. We reply with a clear next step.`,
   },
   cta: {
     heading:
-      "Reach out today to see how intelligent solutions can boost revenue, cut operational costs, and improve efficiency",
+      "Tell us what's slowing your business down.",
     subheading:
-      "Talk to our team to learn how we can empower your organization with the right technologies and solutions.",
+      "Send us a note. We'll tell you honestly whether we can help and what it would take.",
   },
   copyrightSuffix: "All rights reserved.",
   /** Title segment when product slug is missing */

@@ -39,8 +39,7 @@ export default function ContactPage() {
           Talk to us about your next project.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-(--color-text-muted)">
-          Reach out by email or through our website. We keep the process
-          straightforward and respond with practical next steps.
+          Email us and tell us what you need. We'll reply with what we'd do next.
         </p>
       </section>
 
@@ -104,7 +103,7 @@ export default function ContactPage() {
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
                 <span>
-                  We review your message and route it to the right person.
+                  We read your message and pass it to the right person.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -113,7 +112,7 @@ export default function ContactPage() {
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
                 <span>
-                  We reply with the best next step by email.
+                  We reply by email with the next step.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -122,7 +121,7 @@ export default function ContactPage() {
                   className="mt-1 h-2 w-2 rounded-full bg-(--color-accent)"
                 />
                 <span>
-                  If useful, we follow up to clarify scope or timing.
+                  If needed, we follow up with questions about scope or timing.
                 </span>
               </li>
             </ul>

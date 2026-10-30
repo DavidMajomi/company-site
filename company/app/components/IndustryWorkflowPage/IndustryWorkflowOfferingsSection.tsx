@@ -23,7 +23,7 @@ export function IndustryWorkflowOfferingsSection({
       aria-labelledby="offerings-heading"
     >
       <div className="p-[clamp(1.25rem,3vw,2rem)] max-sm:p-4">
-        <Eyebrow text="Relevant offerings" />
+        <Eyebrow text="How we can help" />
         <h2
           id="offerings-heading"
           className="mt-[0.9rem] mb-0 font-serif text-fluid-section font-medium leading-[0.98] tracking-normal text-(--color-text)"
